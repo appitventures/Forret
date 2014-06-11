@@ -1,0 +1,10 @@
+#Ignore:
+/bootstrap/compiled.php
+/vendor
+composer.phar
+composer.lock
+/app/config/local/*
+.DS_Store
+Vagrantfile
+bootstrap.sh
+.vagrant
