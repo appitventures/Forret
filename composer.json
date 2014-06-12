@@ -10,8 +10,6 @@
 	"require": {
 		"laravel/framework": "4.1.*",
         "way/generators": "~2.6",
-        "mockery/mockery": "~0.9",
-        "phpunit/phpunit": "~4.0",
         "iron-io/iron_mq": "1.5.1",
         "barryvdh/laravel-vendor-cleanup": "1.*",
         "fzaninotto/faker": "1.3.*",

@@ -6,21 +6,27 @@ The purpose of this application is to provide a starting point for development w
 While not complex to install instructions will be provided shortly
 
 ### Links (other repos used in the composer.json will be added shortly)
-* [Laravel 4](https://github.com/laravel/laravel/tree/develop)
-* [Sentry 2.0 Documentation](https://cartalyst.com/manual/sentry)
+* [Laravel4](https://github.com/laravel/laravel/tree/develop)
+* [Sentry2](https://github.com/cartalyst/sentry)
 * [Dingo/Api](https://github.com/dingo/api)
 * [AdminLTE](https://github.com/almasaeed2010/AdminLTE)
-* [L4withSentry](https://github.com/rydurham/L4withSentry) (readme format taken from here)
+* [Laravel-4-Generators](https://github.com/JeffreyWay/Laravel-4-Generators)
+* [Iron-mq](https://github.com/iron-io/iron_mq_php)
+* [Faker](https://github.com/fzaninotto/Faker)
+* [Laravel-vendor-cleanup](https://github.com/barryvdh/laravel-vendor-cleanup)
+* [Laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
+* [Laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
+* [Bugsnag](https://github.com/bugsnag/bugsnag-php)
+* [Respect/Validation](https://github.com/Respect/Validation)
 
 ### Tests
 1. Take my word that it works? Tests to be added.
 
-### Notes
-
-* Tests are currently very limited.  
 
 ### History
-Also to be added
+* put backstory(?) here
+
+
 
 =======
 This Starter kit is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT) and the [DBAD license](https://github.com/philsturgeon/dbad/blob/master/LICENSE-en.md)
