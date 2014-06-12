@@ -12,3 +12,4 @@ bootstrap.sh
 /app/config/development
 /bootstrap/start.php
 /storage/*
+/conf
