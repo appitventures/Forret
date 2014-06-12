@@ -3,8 +3,12 @@
 /vendor
 composer.phar
 composer.lock
-/app/config/local/*
+/app/config/development/*
+/app/config/systest/*
 .DS_Store
 Vagrantfile
 bootstrap.sh
 .vagrant
+/app/config/development
+/bootstrap/start.php
+/storage/*
