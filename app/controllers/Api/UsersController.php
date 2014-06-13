@@ -10,8 +10,8 @@ class UsersController extends BaseController {
     public function __construct(UserInterface $user){
         $this->user = $user;
 
-        $this->beforeFilter('api.auth',['only'=>['index','show','destroy','update']]);
-        $this->beforeFilter('api.isAdmin',['only'=>['index']]);
+        $this->beforeFilter('api.auth',['only'=>['index','show','update']]);
+        $this->beforeFilter('api.isAdmin',['only'=>['destroy']]);
     }
     public function index() {
         return $this->user->recent25();

@@ -19,7 +19,7 @@ class SessionsController extends BaseController {
 
     public function create(){
         $view['title'] = 'Admin Login';
-        return View::make('admin.pages.auth.login',$view);
+        return View::make('Admin::pages.auth.login',$view);
     }
 
     public function store(){
