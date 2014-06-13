@@ -18,6 +18,5 @@ class DashboardController extends BaseController {
         else{
             return View::make('Admin::pages.dashboard', $view);
         }
-
     }
 } 
