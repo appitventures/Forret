@@ -1,4 +1,4 @@
-@extends('admin.layouts.default')
+@extends('Admin::layouts.default')
 
 @section('content')
     <div class = 'row'>

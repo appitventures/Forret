@@ -1,4 +1,4 @@
-@extends('admin.layouts.auth')
+@extends('Admin::layouts.auth')
 
 @section('form')
 

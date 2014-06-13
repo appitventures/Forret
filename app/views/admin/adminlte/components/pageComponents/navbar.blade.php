@@ -11,5 +11,5 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
 </a>
-@include('admin.components.pageComponents.navbarProfile')
+@include('Admin::components.pageComponents.navbarProfile')
 </nav>
