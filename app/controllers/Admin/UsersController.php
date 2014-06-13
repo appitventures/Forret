@@ -23,7 +23,7 @@ class UsersController extends BaseController {
 	public function index(){
 		$view['users'] = $this->api->get('users');
         $view['title'] = 'User Management';
-        return View::make('admin.pages.users.index',$view);
+        return View::make('Admin::pages.users.index',$view);
 	}
 
 	/**
