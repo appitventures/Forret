@@ -29,7 +29,7 @@
 			"app/database/seeds"
 		],
 		"psr-0": {
-            "Starter": "app/",
+            "Solum": "app/",
             "Controllers\\Api": "app/",
             "Controllers\\Admin": "app/"
 		}

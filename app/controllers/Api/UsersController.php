@@ -1,6 +1,6 @@
 <?php namespace Controllers\Api;
 
-use Starter\InterRepos\Interfaces\UserInterface;
+use Solum\Interfaces\UserInterface;
 use Input;
 use Redirect;
 use View;

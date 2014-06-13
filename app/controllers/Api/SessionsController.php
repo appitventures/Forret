@@ -4,7 +4,7 @@ use Sentry;
 use Dingo\Api\Exception\ResourceException;
 use Input;
 use Redirect;
-use Starter\Validation\UserValidator;
+use Solum\Validation\UserValidator;
 
 class SessionsController extends BaseController {
     public function __construct(UserValidator $validator){

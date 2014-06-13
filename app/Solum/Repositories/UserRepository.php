@@ -1,14 +1,13 @@
-<?php  namespace Starter\InterRepos\Repositories;
+<?php  namespace Solum\Repositories;
 use Carbon\Carbon;
-use Starter\InterRepos\Interfaces\UserInterface;
+use Solum\Interfaces\UserInterface;
 use Sentry;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Support\MessageBag;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use User;
-use Starter\Validation\UserValidator;
-use Starter\Mailers\UserMailer;
+use Solum\Validation\UserValidator;
+use Solum\Mailers\UserMailer;
 
 
 class UserRepository extends BaseRepository implements UserInterface {

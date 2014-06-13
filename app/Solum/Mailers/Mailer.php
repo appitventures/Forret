@@ -1,4 +1,4 @@
-<?php namespace Starter\Mailers;
+<?php namespace Solum\Mailers;
 
 use \Mail;
 

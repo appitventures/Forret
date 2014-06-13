@@ -110,7 +110,7 @@ return array(
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
         'Barryvdh\VendorCleanup\VendorCleanupServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
-        'Starter\Providers\BackendServiceProvider',
+        'Solum\Providers\BackendServiceProvider',
         'Dingo\Api\ApiServiceProvider',
         'Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider',
         'Cartalyst\Sentry\SentryServiceProvider'

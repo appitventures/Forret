@@ -1,7 +1,7 @@
 <?php
-namespace Starter\Validation\Forms;
+namespace Solum\Validation\Forms;
 
-use Air\Exceptions\FormValidationException;
+use Solum\Exceptions\FormValidationException;
 use Illuminate\Validation\Factory as Validator;
 
 abstract class FormValidator {

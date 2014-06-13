@@ -1,4 +1,4 @@
-<?php  namespace Starter\Validation\Forms;
+<?php  namespace Solum\Validation\Forms;
 
 class Login extends FormValidator{
     protected $rules = [

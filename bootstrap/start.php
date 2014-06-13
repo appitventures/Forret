@@ -28,13 +28,9 @@ $env = $app->detectEnvironment(array(
 
     // Development
     // any machine name with the term "local" will use the local environment
-    'development' => ['devmachine'],
+    'development' => ['hopkinsAppit'],
 
-    'systest' => ['systest'],
-
-    // Stage
-    // any machine name with the term "stage" will use the stage environment
-    'stage' => ['staging']
+    'systest' => ['ip-172-31-14-201'],
 
     // Production
     // production is default, so we don't need to specify any detection

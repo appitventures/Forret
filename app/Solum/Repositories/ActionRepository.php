@@ -1,6 +1,6 @@
-<?php namespace Starter\InterRepos\Repositories;
+<?php namespace Solum\Repositories;
 
-use Starter\InterRepos\Interfaces\ActionInterface;
+use Solum\Interfaces\ActionInterface;
 use Action;
 
 class ActionRepository implements ActionInterface {

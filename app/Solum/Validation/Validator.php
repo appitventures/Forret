@@ -1,9 +1,7 @@
-<?php namespace Starter\Validation;
+<?php namespace Solum\Validation;
 
-use Respect\Validation\Exceptions\AbstractNestedException;
 use Respect\Validation\Validator as v;
-use Respect\Validation\Exceptions\AllOfException;
-use Starter\Exceptions\ValidationException;
+use Solum\Exceptions\ValidationException;
 
 /**
  * Class Validator

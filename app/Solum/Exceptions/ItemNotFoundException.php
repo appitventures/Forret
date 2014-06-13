@@ -1,4 +1,4 @@
-<?php namespace Starter\Exceptions;
+<?php namespace Solum\Exceptions;
 
 use Illuminate\Support\MessageBag;
 

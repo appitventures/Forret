@@ -1,4 +1,4 @@
-<?php  namespace Starter\InterRepos\Interfaces;
+<?php  namespace Solum\Interfaces;
 
 interface UserInterface {
     public function all();

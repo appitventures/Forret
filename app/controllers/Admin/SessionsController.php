@@ -2,7 +2,7 @@
 use Cartalyst\Sentry\Users\UserNotFoundException;
 use Dingo\Api\Auth\Shield;
 use Dingo\Api\Dispatcher;
-use Starter\Exceptions\ValidationException;
+use Solum\Exceptions\ValidationException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use View;
 use Input;
