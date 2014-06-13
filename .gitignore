@@ -15,3 +15,4 @@ bootstrap.sh
 /conf
 _ide_helper.php
 /app/config/packages/bugsnag/bugsnag-laravel/config.php
+.idea
