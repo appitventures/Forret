@@ -1,9 +1,8 @@
 <?php  namespace Controllers\Admin;
-use Cartalyst\Sentry\Users\UserNotFoundException;
 use Dingo\Api\Auth\Shield;
 use Dingo\Api\Dispatcher;
-use Solum\Exceptions\ValidationException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 use View;
 use Input;
 use Redirect;
@@ -27,10 +26,7 @@ class SessionsController extends BaseController {
             $this->api->post('api/sessions',Input::all());
             return Redirect::to('admin/');
         }
-        catch(ValidationException $e){
-            return Redirect::back()->withErrors($e->getErrors())->withInput();
-        }
-        catch(UserNotFoundException $e){
+        catch(UnauthorizedHttpException $e){
             return Redirect::back()->withErrors($e->getMessage())->withInput();
         }
     }
