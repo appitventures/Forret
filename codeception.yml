@@ -15,3 +15,4 @@ modules:
             user: 'solum_codecept'
             password: 'codeceptpass'
             dump: app/database/dump.sql
+            cleanup: false

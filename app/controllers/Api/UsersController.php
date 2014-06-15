@@ -6,6 +6,8 @@ use Solum\Exceptions\ValidationException;
 use Solum\Interfaces\UserInterface;
 use Input;
 use Redirect;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 use View;
 use Mail;
 
@@ -32,7 +34,14 @@ class UsersController extends BaseController {
         }
     }
     public function show($id) {
-        return $this->user->find($id);
+        try{
+            $this->user->privatePage($id);
+            return $this->user->find($id);
+        }
+        catch(AccessDeniedHttpException $e){
+            throw new UnauthorizedHttpException('Unauthorized',$e->getMessage());
+        }
+
     }
 
     public function destroy($id){

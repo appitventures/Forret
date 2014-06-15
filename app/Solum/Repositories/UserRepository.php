@@ -84,8 +84,10 @@ class UserRepository extends BaseRepository implements UserInterface {
         if(!Sentry::check()) {
             throw new AccessDeniedHttpException();
         }
-        if($user_id != Sentry::getUser()->getId() || !Sentry::getUser()->inGroup(Sentry::getGroupProvider()->findByName('Admins'))) {
-            throw new AccessDeniedHttpException();
+        if($user_id != Sentry::getUser()->getId()){
+            if(!Sentry::getUser()->inGroup(Sentry::getGroupProvider()->findByName('Admins'))) {
+                throw new AccessDeniedHttpException();
+            }
         }
     }
 } 
