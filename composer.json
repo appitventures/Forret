@@ -18,7 +18,8 @@
         "dingo/api": "0.*",
         "bugsnag/bugsnag-laravel": "1.*",
         "respect/validation": "dev-master",
-        "cartalyst/sentry": "2.1.*"
+        "cartalyst/sentry": "2.1.*",
+        "codeception/codeception": "2.*"
 	},
 	"autoload": {
 		"classmap": [

@@ -1,0 +1,9 @@
+class_name: ApiGuyTester
+modules:
+    enabled: [PhpBrowser, REST, ApiGuyHelper, Db]
+    config:
+        PhpBrowser:
+            url: 'http://solum.dev/'
+        REST:
+            url: 'http://solum.dev/api'
+
