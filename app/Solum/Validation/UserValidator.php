@@ -13,7 +13,7 @@ class UserValidator extends Validator
     }
 
     public function forCreate($data){
-        $validator = V::key('first_name', V::string()->notEmpty()->between('a','z')->length(1, 50))
+        $validator = V::key('first_name', V::string()->notEmpty()->length(1, 50))
                       ->key('last_name', V::string()->notEmpty()->length(1, 50))
                       ->key('email', V::email()->notEmpty())
                       ->key('password', V::string()->notEmpty()->length(0, 200));

@@ -1,5 +1,8 @@
 <?php namespace Controllers\Api;
 
+use Cartalyst\Sentry\Users\UserExistsException;
+use Dingo\Api\Exception\StoreResourceFailedException;
+use Solum\Exceptions\ValidationException;
 use Solum\Interfaces\UserInterface;
 use Input;
 use Redirect;
@@ -18,7 +21,15 @@ class UsersController extends BaseController {
     }
 
     public function store(){
-        return $this->user->createNew(Input::all());
+        try {
+            return $this->user->createNew(Input::all());
+        }
+        catch(ValidationException $e){
+            throw new StoreResourceFailedException($e->getMessage(),$e->getErrors());
+        }
+        catch(UserExistsException $e){
+            throw new StoreResourceFailedException($e->getMessage());
+        }
     }
     public function show($id) {
         return $this->user->find($id);
