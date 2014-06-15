@@ -53,6 +53,14 @@ While not complex to install instructions will be provided shortly
 ### History
 * put backstory(?) here
 
+### To Do
+* Swap out Laravel's auth for Oauth2
+* Add try catch statements to frontend
+* Catch all exceptions and throw the proper Dingo/API exceptions
+* All views for admin panel
+* All views for user frontend
+* Write acceptance tests for api
+* Selenium tests for frontend?
 
 
 =======
