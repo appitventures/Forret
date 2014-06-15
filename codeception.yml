@@ -1,0 +1,17 @@
+actor: Tester
+paths:
+    tests: tests
+    log: tests/_output
+    data: tests/_data
+    helpers: tests/_support
+settings:
+    bootstrap: _bootstrap.php
+    colors: true
+    memory_limit: 1024M
+modules:
+    config:
+        Db:
+            dsn: 'mysql:host=localhost;dbname=solum_codeception_testing'
+            user: 'solum_codecept'
+            password: 'codeceptpass'
+            dump: app/database/dump.sql

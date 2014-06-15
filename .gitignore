@@ -18,3 +18,4 @@ _ide_helper.php
 .idea
 /public/assets/metronic/*
 /public/assets/flex/*
+tests/_output/*
