@@ -6,8 +6,8 @@ use Faker\Factory as Faker;
 class TestUsersSeeder extends Seeder {
     public function run() {
         $faker = Faker::create();
-        $userEmail = 'user@starter.com';
-        $adminEmail = 'admin@starter.com';
+        $userEmail = 'user@solum.com';
+        $adminEmail = 'admin@solum.com';
 
         $useruser = Sentry::getUserProvider()->create(['activated' => 1,'email' => $userEmail, 'first_name' => $faker->firstName, 'last_name' => $faker->lastName, 'phone_number' => $faker->phoneNumber, 'address1' => $faker->streetAddress, 'city' => $faker->city, 'state' => 'CO', 'zip' => $faker->postcode, 'password' => 'password']);
 
