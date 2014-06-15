@@ -7,7 +7,7 @@ class UsersTableSeeder extends Seeder {
     public function run(){
         $faker = Faker::create();
 
-        foreach(range(1, 100) as $index){
+        foreach(range(1, 10) as $index){
             $useruser = Sentry::getUserProvider()->create([
                 'email' => $faker->email,
                 'first_name' => $faker->firstName,

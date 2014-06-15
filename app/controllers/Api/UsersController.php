@@ -34,14 +34,8 @@ class UsersController extends BaseController {
         }
     }
     public function show($id) {
-        try{
-            $this->user->privatePage($id);
-            return $this->user->find($id);
-        }
-        catch(AccessDeniedHttpException $e){
-            throw new UnauthorizedHttpException('Unauthorized',$e->getMessage());
-        }
-
+        $this->user->privatePage($id);
+        return $this->user->find($id);
     }
 
     public function destroy($id){
