@@ -10,11 +10,6 @@ class User extends SentryUserModel implements UserInterface, RemindableInterface
     protected $softDelete = true;
     protected $table = 'users';
     protected $dates = ['created_at','updated_at','deleted_at'];
-    protected $hidden = array('password');
-
-    public function setPasswordAttribute($pass){
-        $this->attributes['password'] = Hash::make($pass);
-    }
 
     /**
      * Get the unique identifier for the user.
@@ -75,9 +70,5 @@ class User extends SentryUserModel implements UserInterface, RemindableInterface
     public function getReminderEmail()
     {
         return $this->email;
-    }
-
-    public function groups(){
-        return $this->belongsToMany('Group','users_groups','user_id','group_id');
     }
 }

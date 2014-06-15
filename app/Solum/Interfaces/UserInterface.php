@@ -8,4 +8,5 @@ interface UserInterface {
     public function update($id,$data);
     public function recent25();
     public function privatePage($user_id);
+    public function undestroy($id);
 } 

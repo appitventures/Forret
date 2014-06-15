@@ -15,8 +15,8 @@ class UsersController extends BaseController {
     public function __construct(UserInterface $user){
         $this->user = $user;
 
-        $this->beforeFilter('api.auth',['only'=>['index','show','update']]);
-        $this->beforeFilter('api.isAdmin',['only'=>['destroy']]);
+        $this->beforeFilter('api.auth',['only'=>['show','update']]);
+        $this->beforeFilter('api.isAdmin',['only'=>['index','destroy']]);
     }
     public function index() {
         return $this->user->recent25();
@@ -39,8 +39,11 @@ class UsersController extends BaseController {
     }
 
     public function destroy($id){
-        $this->user->privatePage($id);
         return $this->user->destroy($id);
+    }
+
+    public function undestroy($id){
+        return $this->user->undestroy($id);
     }
 
     public function update($id){

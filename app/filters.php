@@ -11,6 +11,8 @@
 |
 */
 
+use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
+
 App::before(function($request)
 {
 	//
@@ -33,10 +35,12 @@ App::after(function($request, $response)
 |
 */
 Route::filter('auth', function(){
+
     if (!Sentry::check()) return Redirect::route('login');
 });
 
 Route::filter('inGroup', function($route, $request, $value){
+
     if($value == 'Admins'){
         $email = 'admin@starter.com';
     }
@@ -49,35 +53,6 @@ Route::filter('inGroup', function($route, $request, $value){
         'password' => 'password'
     );
     Sentry::authenticate($credentials);
-    /*
-    if($value == 'Admins') {
-        $route = 'adminlogin';
-    }
-    else{
-        $route = 'login';
-    }
-    if (!Sentry::check()) return Redirect::route($route);
-    // we need to determine if a non admin user
-    // is trying to access their own account.
-    $userId = Route::input('users');
-    try{
-        $user = Sentry::getUser();
-        $group = Sentry::findGroupByName($value);
-        if ($userId != Session::get('userId') && (! $user->inGroup($group))  ){
-            Session::flash('error', trans('users.noaccess'));
-            return Redirect::route($route);
-        }
-    }
-    catch (Cartalyst\Sentry\Users\UserNotFoundException $e){
-        Session::flash('error', trans('users.notfound'));
-        return Redirect::route($route);
-    }
-    catch (Cartalyst\Sentry\Groups\GroupNotFoundException $e){
-        Session::flash('error', trans('groups.notfound'));
-        return Redirect::route($route);
-    }
-    */
-
 });
 /*
 |--------------------------------------------------------------------------

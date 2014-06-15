@@ -1,5 +1,6 @@
 <?php  namespace Solum\Repositories;
 use Carbon\Carbon;
+use Dingo\Api\Exception\ResourceException;
 use Solum\Interfaces\UserInterface;
 use Sentry;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -89,5 +90,14 @@ class UserRepository extends BaseRepository implements UserInterface {
                 throw new AccessDeniedHttpException();
             }
         }
+    }
+
+    public function undestroy($id){
+        $user = User::withTrashed()->find($id);
+        if($user->trashed()){
+            $user->restore();
+            return User::find($id);
+        }
+        throw new ResourceException('User Not Found');
     }
 } 

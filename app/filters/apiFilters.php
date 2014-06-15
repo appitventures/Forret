@@ -1,31 +1,14 @@
 <?php
 
-use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 
 Route::filter('api.auth', function(){
-    if (!Sentry::check()) throw new AccessDeniedHttpException();
-});
-
-Route::filter('api.inGroup', function($route, $request, $value){
-    if (!Sentry::check()) throw new AccessDeniedHttpException();
-    $userId = Route::input('users');
-    try{
-        $user = Sentry::getUser();
-        $group = Sentry::findGroupByName($value);
-        if ($userId != Session::get('userId') && (! $user->inGroup($group))  ){
-            throw new AccessDeniedHttpException();
-        }
-    }
-    catch (Cartalyst\Sentry\Users\UserNotFoundException $e){
-        throw new AccessDeniedHttpException();
-    }
-    catch (Cartalyst\Sentry\Groups\GroupNotFoundException $e){
-        throw new AccessDeniedHttpException();
-    }
+    if (!Sentry::check()) throw new UnauthorizedHttpException('Unauthorized');#throw new AccessDeniedHttpException();
 });
 
 Route::filter('api.isAdmin',function($route,$request){
-    if(!Sentry::getUser()->inGroup(Sentry::findGroupByName('Admins'))) throw new AccessDeniedHttpException();
+    Route::callRouteFilter('api.auth',[],$route,$request);
+    if(!Sentry::getUser()->inGroup(Sentry::findGroupByName('Admins'))) throw new UnauthorizedHttpException('Unauthorized');
 });
 
 Route::filter('api.action',function($route,$request){

@@ -1,6 +1,7 @@
 <?php
 
 Route::resource('users', 'Controllers\Api\UsersController');
+Route::get("users/{users}/undestroy",'Controllers\Api\UsersController@undestroy');
 Route::get('users/search','Controllers\Api\UsersController@search');
 Route::resource('sessions','Controllers\Api\SessionsController');
 Route::get('/logout',function(){
