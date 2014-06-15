@@ -56,4 +56,4 @@ While not complex to install instructions will be provided shortly
 
 
 =======
-This Starter kit is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT) and the [DBAD license](https://github.com/philsturgeon/dbad/blob/master/LICENSE-en.md)
+This Starter kit is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)

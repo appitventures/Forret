@@ -55,7 +55,7 @@ return array(
         'mysql' => array(
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'database'  => 'l4sentry',
+            'database'  => 'solum',
             'username'  => 'dbuser',
             'password'  => 'dbpassword',
             'charset'   => 'utf8',
