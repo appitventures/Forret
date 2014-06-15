@@ -6,11 +6,8 @@
             <div class="box-header">
                 <h3 class="box-title">Create User</h3>
             </div>
-
                 @include('Admin::components.forms.createUser')
             </div>
-
         </div>
     </div>
-
 @stop
