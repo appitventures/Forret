@@ -34,6 +34,10 @@ class UsersController extends BaseController {
         return $this->user->update($id,Input::all());
     }
 
+    public function search(){
+
+    }
+
     public function getActivate(){
         $user = Sentry::findUserByCredentials(array(
             'email'=> $_REQUEST['useremail']

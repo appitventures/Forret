@@ -64,8 +64,4 @@
 
 @section('pagescripts')
 
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
-    <script src="/assets/metronic/global/scripts/metronic.js" type="text/javascript"></script>
-    <script src="/assets/metronic/admin/layout/scripts/layout.js" type="text/javascript"></script>
-
 @stop

@@ -2,6 +2,7 @@
 use Dingo\Api\Auth\Shield;
 use Dingo\Api\Dispatcher;
 use \View;
+use Input;
 
 class UsersController extends BaseController {
 
@@ -34,7 +35,8 @@ class UsersController extends BaseController {
 	 */
 	public function create()
 	{
-		//
+		$view['title'] = 'User Management';
+        return View::make('Admin::pages.users.create',$view);
 	}
 
 	/**
@@ -95,5 +97,11 @@ class UsersController extends BaseController {
 	{
 		//
 	}
+
+    public function search(){
+        $view['users'] = $this->api->get('users/search',[Input::all()]);
+        $view['title'] = 'Search Results';
+        return View::make('Admin::pages.users.search',$view);
+    }
 
 }
