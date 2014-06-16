@@ -17,7 +17,7 @@ class UsersEndpointTestingCest
     {
         $I->wantTo('confirm users are returned when');
         $I->sendGet('/users');
-        $I->canSeeResponseCodeIs(403);
+        $I->canSeeResponseCodeIs(401);
     }
 
     public function confirm_200_when_viewing_own_profile_if_logged_in(ApiGuyTester $I){
@@ -31,6 +31,6 @@ class UsersEndpointTestingCest
         $I->wantTo('confirm I cant view another users profile after logging in');
         $I->sendPOST('/sessions', ['email' => 'user@solum.com', 'password' => 'password']);
         $I->sendGET('/users/2');
-        $I->canSeeResponseCodeIs(401);
+        $I->canSeeResponseCodeIs(403);
     }
 }

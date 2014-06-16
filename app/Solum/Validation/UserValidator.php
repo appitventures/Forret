@@ -17,11 +17,11 @@ class UserValidator extends Validator
             ->key('last_name', V::string()->notEmpty()->length(1, 50))
             ->key('email', V::email()->notEmpty())
             ->key('profile',V::readable(),false)
-            ->key('phone_number',V::phone(),false)
+            ->key('phone_number',V::string(),false)
             ->key('address1',V::string()->length(0,150),false)
             ->key('city',V::string()->length(0,150),false)
             ->key('state',V::string()->length(2),false)
-            ->key('zip',V::string()->length(5,9),false)
+            ->key('zip',V::string()->length(5,10),false)
             ->key('password', V::string()->notEmpty()->length(0, 200));
         $errorMessage = 'Error creating user';
         $errorFields = ['email','first_name','last_name','password'];

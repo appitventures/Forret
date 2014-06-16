@@ -9,7 +9,7 @@ class UserCreationTestingCest {
     public function _after() {
     }
 
-    public function confirm_201_when_attempting_to_create_user_with_valid_data(ApiGuyTester $I) {
+    public function confirm_201_when_attempting_to_create_user_with_only_required_fields(ApiGuyTester $I) {
         $faker = faker::create();
         $first_name = $faker->firstName;
         $last_name = $faker->lastName;
@@ -21,6 +21,13 @@ class UserCreationTestingCest {
         $I->canSeeResponseContains($first_name);
         $I->canSeeResponseContains($last_name);
         $I->canSeeResponseContains($email);
+    }
+
+    public function confirm_200_when_attempting_to_create_user_with_all_fields_possible(ApiGuyTester $I) {
+        $faker = faker::create();
+        $I->wantTo('confirm I can create a user when all fields are included');
+        $I->sendPOST('/users', ['first_name' => $faker->firstName, 'last_name' => $faker->lastName, 'email' => $faker->email, 'password' => 'thisIsAPassword','address1'=>$faker->address,/*'address2'=>$faker->secondaryAddress,*/'city'=>$faker->city,'state'=>$faker->stateAbbr,'phone_number'=>$faker->phoneNumber,'zip'=>$faker->postcode]);
+        $I->canSeeResponseCodeIs(200);
     }
 
     public function confirm_422_and_proper_message_when_attempting_create_a_user_without_first_name(ApiGuyTester $I){
