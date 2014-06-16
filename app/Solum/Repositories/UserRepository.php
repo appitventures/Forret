@@ -36,12 +36,7 @@ class UserRepository extends BaseRepository implements UserInterface {
 
     public function createNew($data){
         $this->isValid->forCreate($data);
-        $user = Sentry::register([
-            'email'    => $data['email'],
-            'password' => $data['password'],
-            'first_name' => $data['first_name'],
-            'last_name' => $data['last_name']
-        ]);
+        $user = Sentry::register($data);
         $activationCode = $user->getActivationCode();
         $data = [
             'detail'=>'Account activation mail',

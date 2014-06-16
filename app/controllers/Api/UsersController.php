@@ -6,8 +6,6 @@ use Solum\Exceptions\ValidationException;
 use Solum\Interfaces\UserInterface;
 use Input;
 use Redirect;
-use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
-use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 use View;
 use Mail;
 
@@ -30,7 +28,7 @@ class UsersController extends BaseController {
             throw new StoreResourceFailedException($e->getMessage(),$e->getErrors());
         }
         catch(UserExistsException $e){
-            throw new StoreResourceFailedException($e->getMessage());
+            throw new StoreResourceFailedException('user already exists');
         }
     }
     public function show($id) {
