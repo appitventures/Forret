@@ -34,9 +34,9 @@ class UserRepository extends BaseRepository implements UserInterface {
         }
     }
 
-    public function createNew($data){
-        $this->isValid->forCreate($data);
-        $user = Sentry::register($data);
+    public function createNew($input){
+        $this->isValid->forCreate($input);
+        $user = Sentry::register($input);
         $activationCode = $user->getActivationCode();
         $data = [
             'detail'=>'Account activation mail',
@@ -94,5 +94,21 @@ class UserRepository extends BaseRepository implements UserInterface {
             return User::find($id);
         }
         throw new ResourceException('User Not Found');
+    }
+
+    public function search($input){
+        #$this->isValid->forSearch($input);
+        return $this->user->where('first_name','LIKE','%'.$input['first_name'].'%')->get();
+        /*
+        $users = $this->user->where('active','=',1);
+        foreach($input as $field => $search){
+            $users = $this->scopeSearch($users,$field,$search);
+        }
+        return $users;
+        */
+    }
+
+    private function scopeSearch($query,$field,$search){
+        return $query->where($field,'LIKE','%'.$search.'%');
     }
 } 

@@ -9,4 +9,5 @@ interface UserInterface {
     public function recent25();
     public function privatePage($user_id);
     public function undestroy($id);
+    public function search($input);
 } 

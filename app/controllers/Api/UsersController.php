@@ -32,7 +32,6 @@ class UsersController extends BaseController {
         }
     }
     public function show($id) {
-        $this->user->privatePage($id);
         return $this->user->find($id);
     }
 
@@ -50,7 +49,7 @@ class UsersController extends BaseController {
     }
 
     public function search(){
-
+        return $this->user->search(Input::all());
     }
 
     public function getActivate(){

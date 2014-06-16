@@ -43,4 +43,18 @@ class UserValidator extends Validator
         $errorFields = ['email','first_name','last_name','password','profile','phone_number','address1','city','state','zip'];
         $this->validate($validator,$data,$errorMessage,$errorFields);
     }
+
+    public function forSearch($data){
+        $validator = V::key('first_name', V::string()->alpha(),false)
+            ->key('last_name',V::string()->alpha(),false)
+            ->key('email',V::string(),false)
+            ->key('phone_number',V::string(),false)
+            ->key('address1',V::string(),false)
+            ->key('city',V::string()->alpha(),false)
+            ->key('state',V::string()->alpha()->length(1,2),false)
+            ->key('zip',V::numeric(),false);
+        $errorMessage = 'Error executing search';
+        $errorFields = ['first_name','last_name','email','phone_number','address1','city','state','zip',];
+        $this->validate($validator,$data,$errorMessage,$errorFields);
+    }
 }
