@@ -1,7 +1,6 @@
 <?php
 use \ApiGuyTester;
 use Faker\Factory as faker;
-
 class UsersEndpointTestingCest
 {
     public function _before()
@@ -61,5 +60,27 @@ class UsersEndpointTestingCest
         $I->sendGET('/users/8/undestroy');
         $I->canSeeResponseCodeIs(200);
         $I->canSeeResponseIsJson();
+    }
+
+    public function confirm_200_when_attempting_to_update_user_profile_when_logged_in_as_that_user(ApiGuyTester $I){
+        $f = faker::create();
+        $firstname = $f->firstName;
+        $city = $f->city;
+        $I->wantTo('confirm I can update my profile');
+        $I->sendPOST('/sessions',['email'=>'user@solum.com','password'=>'password']);
+        $I->sendPUT('/users/1',['first_name'=>$firstname,'city'=>$city]);
+        $I->canSeeResponseCodeIs(200);
+        $I->seeResponseContains($firstname);
+        $I->seeResponseContains($city);
+    }
+
+    public function confirm_403_when_attempting_to_update_user_profile_when_logged_in_as_different_user(ApiGuyTester $I){
+        $f = faker::create();
+        $firstname = $f->firstName;
+        $city = $f->city;
+        $I->wantTo('confirm I can update my profile');
+        $I->sendPOST('/sessions',['email'=>'user@solum.com','password'=>'password']);
+        $I->sendPUT('/users/2',['first_name'=>$firstname,'city'=>$city]);
+        $I->canSeeResponseCodeIs(403);
     }
 }
