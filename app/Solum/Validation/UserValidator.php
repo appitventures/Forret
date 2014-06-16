@@ -24,17 +24,23 @@ class UserValidator extends Validator
             ->key('zip',V::string()->length(5,10),false)
             ->key('password', V::string()->notEmpty()->length(0, 200));
         $errorMessage = 'Error creating user';
-        $errorFields = ['email','first_name','last_name','password'];
+        $errorFields = ['email','first_name','last_name','password','profile','phone_number','address1','city','state','zip'];
         $this->validate($validator,$data,$errorMessage,$errorFields);
     }
 
     public function forUpdate($data){
-        $validator = V::key('first_name', V::string()->notEmpty()->length(1, 50), false)
-            ->key('last_name', V::string()->notEmpty()->length(1, 50), false)
-            ->key('email', V::email()->notEmpty(), false)
-            ->key('password', V::string()->notEmpty()->length(0, 200), false);
+        $validator = V::key('first_name', V::string()->length(1, 50),false)
+            ->key('last_name', V::string()->length(1, 50),false)
+            ->key('email', V::email(),false)
+            ->key('profile',V::readable(),false)
+            ->key('phone_number',V::string(),false)
+            ->key('address1',V::string()->length(0,150),false)
+            ->key('city',V::string()->length(0,150),false)
+            ->key('state',V::string()->length(2,2),false)
+            ->key('zip',V::string()->length(5,10),false)
+            ->key('password', V::string()->length(0, 200),false);
         $errorMessage = 'Error updating user';
-        $errorFields = ['email'=> '{{name}} must be a valid email','first_name'=>'{{name}} must be first_name','last_name','password'];
+        $errorFields = ['email','first_name','last_name','password','profile','phone_number','address1','city','state','zip'];
         $this->validate($validator,$data,$errorMessage,$errorFields);
     }
 }
