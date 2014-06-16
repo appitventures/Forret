@@ -16,3 +16,4 @@ modules:
             password: 'codeceptpass'
             dump: app/database/dump.sql
             cleanup: false
+            populate: true
