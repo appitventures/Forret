@@ -97,15 +97,12 @@ class UserRepository extends BaseRepository implements UserInterface {
     }
 
     public function search($input){
-        #$this->isValid->forSearch($input);
-        return $this->user->where('first_name','LIKE','%'.$input['first_name'].'%')->get();
-        /*
-        $users = $this->user->where('active','=',1);
+        $this->isValid->forSearch($input);
+        $users = $this->user->where('activated','=',1);
         foreach($input as $field => $search){
-            $users = $this->scopeSearch($users,$field,$search);
+            $users->where($field,'LIKE',"%$search%");
         }
-        return $users;
-        */
+        return $users->get();
     }
 
     private function scopeSearch($query,$field,$search){

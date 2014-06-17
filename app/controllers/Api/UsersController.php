@@ -8,13 +8,14 @@ use Input;
 use Redirect;
 use View;
 use Mail;
+use Sentry;
 
 class UsersController extends BaseController {
     public function __construct(UserInterface $user){
         $this->user = $user;
 
         $this->beforeFilter('api.auth',['only'=>['show','update']]);
-        $this->beforeFilter('api.isAdmin',['only'=>['index','destroy']]);
+        $this->beforeFilter('api.isAdmin',['only'=>['index','destroy','search']]);
     }
     public function index() {
         return $this->user->recent25();
