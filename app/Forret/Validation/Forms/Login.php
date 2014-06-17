@@ -1,4 +1,4 @@
-<?php  namespace Solum\Validation\Forms;
+<?php  namespace Forret\Validation\Forms;
 
 class Login extends FormValidator{
     protected $rules = [

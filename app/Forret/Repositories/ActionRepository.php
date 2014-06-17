@@ -1,6 +1,6 @@
-<?php namespace Solum\Repositories;
+<?php namespace Forret\Repositories;
 
-use Solum\Interfaces\ActionInterface;
+use Forret\Interfaces\ActionInterface;
 use Action;
 
 class ActionRepository implements ActionInterface {

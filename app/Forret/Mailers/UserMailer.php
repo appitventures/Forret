@@ -1,4 +1,4 @@
-<?php namespace Solum\Mailers;
+<?php namespace Forret\Mailers;
 use \User;
 
 class UserMailer extends Mailer{

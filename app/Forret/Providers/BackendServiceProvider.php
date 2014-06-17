@@ -1,4 +1,4 @@
-<?php  namespace Solum\Providers;
+<?php  namespace Forret\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -8,6 +8,6 @@ class BackendServiceProvider extends ServiceProvider {
      * Register the binding
      */
     public function register() {
-        $this->app->bind('Solum\Interfaces\UserInterface', 'Solum\Repositories\UserRepository');
+        $this->app->bind('Forret\Interfaces\UserInterface', 'Forret\Repositories\UserRepository');
     }
 } 

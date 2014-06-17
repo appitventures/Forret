@@ -1,4 +1,4 @@
-<?php namespace Solum\Validation;
+<?php namespace Forret\Validation;
 
 use Respect\Validation\Exceptions\AbstractNestedException;
 use Respect\Validation\Exceptions\AllOfException;
@@ -6,7 +6,7 @@ use Respect\Validation\Exceptions\KeyException;
 use Respect\Validation\Exceptions\LengthException;
 use Respect\Validation\Exceptions\PhoneException;
 use Respect\Validation\Validator as v;
-use Solum\Exceptions\ValidationException;
+use Forret\Exceptions\ValidationException;
 
 /**
  * Class Validator

@@ -1,4 +1,4 @@
-<?php  namespace Solum\Interfaces;
+<?php  namespace Forret\Interfaces;
 
 interface AnalyticsInterface {
     public function userBreakdown();

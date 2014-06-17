@@ -1,6 +1,6 @@
 {
-    "name": "AppIt/Starterkit",
-    "description": "AppIt Ventures Starterkit",
+    "name": "AppItVentures/Forret",
+    "description": "L4 Starter kit used produced by Forret",
     "authors": [
         {
             "name": "Michael Hopkins",
@@ -30,7 +30,7 @@
 			"app/database/seeds"
 		],
 		"psr-0": {
-            "Solum": "app/",
+            "Forret": "app/",
             "Controllers\\Api": "app/",
             "Controllers\\Admin": "app/"
 		}

@@ -1,14 +1,14 @@
-<?php  namespace Solum\Repositories;
+<?php  namespace Forret\Repositories;
 use Carbon\Carbon;
 use Dingo\Api\Exception\ResourceException;
-use Solum\Interfaces\UserInterface;
+use Forret\Interfaces\UserInterface;
 use Sentry;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use User;
-use Solum\Validation\UserValidator;
-use Solum\Mailers\UserMailer;
+use Forret\Validation\UserValidator;
+use Forret\Mailers\UserMailer;
 
 
 class UserRepository extends BaseRepository implements UserInterface {

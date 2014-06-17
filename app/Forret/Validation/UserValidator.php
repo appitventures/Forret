@@ -1,4 +1,4 @@
-<?php  namespace Solum\Validation;
+<?php  namespace Forret\Validation;
 
 use Respect\Validation\Validator as V;
 

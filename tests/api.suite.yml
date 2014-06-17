@@ -3,7 +3,7 @@ modules:
     enabled: [PhpBrowser, REST, ApiGuyHelper, Db]
     config:
         PhpBrowser:
-            url: 'http://solum.dev/'
+            url: 'http://forret.dev/'
         REST:
-            url: 'http://solum.dev/api'
+            url: 'http://forret.dev/api'
 

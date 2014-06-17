@@ -7,8 +7,8 @@ use Carbon\Carbon;
 class TestUsersSeeder extends Seeder {
     public function run() {
         $faker = Faker::create();
-        $userEmail = 'user@solum.com';
-        $adminEmail = 'admin@solum.com';
+        $userEmail = 'user@forret.com';
+        $adminEmail = 'admin@forret.com';
 
         $useruser = Sentry::register(['email' => $userEmail,'password' => 'password','first_name' => $faker->firstName,'last_name' => $faker->lastName]);
         $useruser->addGroup(Sentry::getGroupProvider()->findByName('Users'));

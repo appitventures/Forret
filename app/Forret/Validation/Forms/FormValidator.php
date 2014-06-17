@@ -1,7 +1,7 @@
 <?php
-namespace Solum\Validation\Forms;
+namespace Forret\Validation\Forms;
 
-use Solum\Exceptions\FormValidationException;
+use Forret\Exceptions\FormValidationException;
 use Illuminate\Validation\Factory as Validator;
 
 abstract class FormValidator {

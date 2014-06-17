@@ -1,4 +1,4 @@
-<?php  namespace Solum\Interfaces;
+<?php  namespace Forret\Interfaces;
 
 interface VehicleInterface {
     public function all();

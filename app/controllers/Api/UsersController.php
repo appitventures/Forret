@@ -2,8 +2,8 @@
 
 use Cartalyst\Sentry\Users\UserExistsException;
 use Dingo\Api\Exception\StoreResourceFailedException;
-use Solum\Exceptions\ValidationException;
-use Solum\Interfaces\UserInterface;
+use Forret\Exceptions\ValidationException;
+use Forret\Interfaces\UserInterface;
 use Input;
 use Redirect;
 use View;

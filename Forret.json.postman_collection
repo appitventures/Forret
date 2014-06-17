@@ -1,6 +1,6 @@
 {
     "id": "544bd7ff-a81f-88f8-dcd8-bc08b49ba028",
-    "name": "Starter",
+    "name": "Forret",
     "description": "",
     "order": [],
     "folders": [
@@ -13,7 +13,7 @@
                 "dd5726af-6f06-c60f-53a3-1cfcf6ceae22",
                 "dc66d7b7-baca-08af-0764-8b50fb5fbed6"
             ],
-            "collection_name": "Starter",
+            "collection_name": "Forret",
             "collection_id": "544bd7ff-a81f-88f8-dcd8-bc08b49ba028"
         },
         {
@@ -28,7 +28,7 @@
                 "b2b78d82-de16-67ca-9776-3aa66d2190db",
                 "be6825cb-d402-ed4b-f187-375068a84f14"
             ],
-            "collection_name": "Starter",
+            "collection_name": "Forret",
             "collection_id": "544bd7ff-a81f-88f8-dcd8-bc08b49ba028"
         }
     ],
