@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `forret_codeception_testing` /*!40100 DEFAULT CHA
 USE `forret_codeception_testing`;
 -- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
 --
--- Host: 127.0.0.1    Database: forret_codeception_testing
+-- Host: 127.0.0.1    Database: forret_development
 -- ------------------------------------------------------
 -- Server version	5.6.12-log
 
@@ -75,7 +75,7 @@ CREATE TABLE `groups` (
 
 LOCK TABLES `groups` WRITE;
 /*!40000 ALTER TABLE `groups` DISABLE KEYS */;
-INSERT INTO `groups` VALUES (1,'Users','{\"user\":1}',NULL,'2014-06-15 16:24:38','2014-06-15 16:24:38'),(2,'Admins','{\"user\":1,\"admin\":1}',NULL,'2014-06-15 16:24:38','2014-06-15 16:24:38');
+INSERT INTO `groups` VALUES (1,'Users','{\"user\":1}',NULL,'2014-06-17 20:22:04','2014-06-17 20:22:04'),(2,'Admins','{\"user\":1,\"admin\":1}',NULL,'2014-06-17 20:22:04','2014-06-17 20:22:04');
 /*!40000 ALTER TABLE `groups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -222,7 +222,7 @@ CREATE TABLE `users` (
   UNIQUE KEY `users_email_unique` (`email`),
   KEY `users_activation_code_index` (`activation_code`),
   KEY `users_reset_password_code_index` (`reset_password_code`)
-) ENGINE=InnoDB AUTO_INCREMENT=103 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -231,7 +231,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,NULL,'user@forret.com','Yessenia','Erdman',NULL,'$2y$10$TAr2vDo3Ekw5d0WxONrX6eRoxDnQdcAapV1Hxj/GWFsd6.gNebUUi','1-046-273-8382x1026','2021 Kreiger Trail Apt. 839',NULL,'Jacobsonshire','CO','36465-4928',0,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-15 16:24:38','2014-06-15 16:24:38'),(2,NULL,'admin@forret.com','Angelina','Schowalter',NULL,'$2y$10$fghX4FjR4cItxUgqm1a1P.q7oB4l3Rs0CHTh/2ihj.q//OOClpT3G','1-538-310-7310x52883','3942 Jakubowski Vista',NULL,'Runolfssonchester','CO','82665',0,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-15 16:24:38','2014-06-15 16:24:38'),(3,NULL,'omari24@yahoo.com','Ruthe','Robel',NULL,'$2y$10$Y4r8fUmEwuVIpaeK7dsp0ulKQpogHGwTz6HyUHAsAt/33USZ38B8K','1-758-879-9943x9976','63770 Arielle Prairie Apt. 044',NULL,'New Sanfordberg','CO','45893',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-15 16:24:38','2014-06-15 16:24:38'),(4,NULL,'chaag@gmail.com','Audrey','Purdy',NULL,'$2y$10$K5PPBvzmwlcVOpQoyZtsfe3ykZMjXR5IS1AJejx1/h5hX7prsnfxu','1-980-745-7022x4538','08279 Abshire Shores',NULL,'Herzogtown','CO','29683',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-15 16:24:38','2014-06-15 16:24:38'),(5,NULL,'rice.phoebe@hyatt.info','Mitchell','Donnelly',NULL,'$2y$10$V1/gz8C.EbsoaYNBMAyiQ.mFCP.mGKB9rrlLgbw.SHjD0HIn/VcaS','(029)549-0159x79363','2827 Charles Passage Apt. 622',NULL,'Angelicaside','CO','53178-5632',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-15 16:24:38','2014-06-15 16:24:38'),(6,NULL,'ansel59@hotmail.com','London','Hilpert',NULL,'$2y$10$0WtCvfn5hMwiIVJAc3WNxumuItvVjwrxo.WQToJxpxNYkUizr9el2','1-114-793-2014','55124 Sipes Course Apt. 130',NULL,'Krajcikstad','CO','83197-9888',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-15 16:24:39','2014-06-15 16:24:39'),(7,NULL,'laurie06@gmail.com','Alek','Mohr',NULL,'$2y$10$KRfSlLMzcDbVg2OAFLlBfuaswvCKg8P6RUAu/uPMuYJDxvIJcETCa','1-022-424-3354x04701','9498 Gwendolyn Keys Suite 733',NULL,'Hilpertchester','CO','67800',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-15 16:24:39','2014-06-15 16:24:39'),(8,NULL,'lazaro.o\'reilly@gmail.com','Susanna','Little',NULL,'$2y$10$c6vS8G5MzNXdC/L0axtY0Oh9zkQoTABkVLBpNjEofVuoWsOIFCkx6','1-606-546-1300','547 Nader Union Suite 529',NULL,'South Friedaview','CO','86158',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-15 16:24:39','2014-06-15 16:24:39'),(9,NULL,'jmohr@gmail.com','Chelsie','Stark',NULL,'$2y$10$VUkv.2ldA1ArTAZ2aT4ihOR2YcRSoZCu7Pp10IIyyZBNeeUqm8b.2','+74(8)5275466161','678 Christiansen Circles',NULL,'Zacheryside','CO','78777-5302',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-15 16:24:39','2014-06-15 16:24:39'),(10,NULL,'jaclyn.kohler@yahoo.com','Brenna','Collier',NULL,'$2y$10$PqranCb.6rTxzE072x5jiOg0Pv3VKhD1h8UG9CF8WYTiS3s8SnQMW','(707)729-1284x85062','75008 Ullrich Isle',NULL,'Lake Aliberg','CO','17279-5985',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-15 16:24:39','2014-06-15 16:24:39');
+INSERT INTO `users` VALUES (1,NULL,'user@forret.com','Alayna','Mante',NULL,'$2y$10$3Q43Ppli8kIdDFAm1zcmKe9QVioF4sPupqiVnVtIRVDBqXcH1DwGC',NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL,'2014-06-17 20:22:04',NULL,NULL,NULL,NULL,'2014-06-17 20:22:04','2014-06-17 20:22:04'),(2,NULL,'admin@forret.com','Emmett','Leffler',NULL,'$2y$10$41xBCIkB7hOkHNv3BZP/Q.kIjDUrVYlNcQAQDrkoajH/m/ozuVmG2',NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL,'2014-06-17 20:22:04',NULL,NULL,NULL,NULL,'2014-06-17 20:22:04','2014-06-17 20:22:04'),(3,NULL,'nickolas98@hotmail.com','Jarvis','Bosco',NULL,'$2y$10$gF8rcrUTvqKNDaY0bqI/Quov07XnFuVgqaF3YkDAviqNMGXRrNRoG','497-894-6523x669','5910 Reid Meadow Suite 968',NULL,'Leathatown','CO','51640-3494',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-17 20:22:04','2014-06-17 20:22:04'),(4,NULL,'albert.beer@yahoo.com','Dawn','Koelpin',NULL,'$2y$10$SWfUU42eeFuj/cXZubGva.8HJadcfnOjSa4fN57bCFlHe0J7UzIfi','790.836.1756','4724 Dickens Estate Apt. 605',NULL,'West Lia','CO','47013',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-17 20:22:04','2014-06-17 20:22:04'),(5,NULL,'west.neva@johns.com','Glenna','Bosco',NULL,'$2y$10$.ESzF6QzCtin6FajuQUPJ.5H7M.IOheYvM.d3AVswTyDEzkapBdo.','(666)638-4171x36253','198 Morton Lock Apt. 762',NULL,'Lake Nikolasshire','CO','80136',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-17 20:22:04','2014-06-17 20:22:04'),(6,NULL,'gia71@hotmail.com','Maynard','Bernhard',NULL,'$2y$10$iN3NgK51lgd7V8JIDjdWAejKut3XLxLG2sLiZNKVI8EzqQ.lL.Fjy','1-141-871-4379','263 Orland Station',NULL,'Domenickshire','CO','06378-4615',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-17 20:22:05','2014-06-17 20:22:05'),(7,NULL,'boyd.doyle@reichert.info','Domenico','Gulgowski',NULL,'$2y$10$u63MIhO6VGxv5uPmKDlrjOdOp5SVRedLh1n/VdnaW1ALm4GpdKqiy','200.808.6142','7121 Nickolas Trail',NULL,'East Deshaun','CO','42081-5841',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-17 20:22:05','2014-06-17 20:22:05'),(8,NULL,'marques.douglas@carter.com','Valentin','Hettinger',NULL,'$2y$10$FNzzU65wtpf/7.55yLTzEe.uOQQ./7OaCQ8exwMOKwMwWE8joR0je','1-335-144-0395','4023 Clay Knoll Suite 616',NULL,'South Paris','CO','36730-5799',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-17 20:22:05','2014-06-17 20:22:05'),(9,NULL,'philip34@botsfordbednar.info','Sherwood','Kub',NULL,'$2y$10$5qxUQ6MbsfFVK60DnA2leelM8.kIZhudTLehA.ZQVrCZCK3Nf0knC','1-549-882-7933x4841','72381 Chad Knolls',NULL,'Brayanhaven','CO','55980-1230',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-17 20:22:06','2014-06-17 20:22:06'),(10,NULL,'karine77@hudsonwolff.com','Citlalli','Stehr',NULL,'$2y$10$PtZlopLdRqHRelCuivgfxegHuYwV5uKpzXuXVihBQfGHeHscXgyjy','+21(3)3775073084','5704 Douglas Freeway Suite 184',NULL,'Andyport','CO','59520-7956',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-17 20:22:06','2014-06-17 20:22:06'),(11,NULL,'imoore@hotmail.com','Karelle','Medhurst',NULL,'$2y$10$9yDs9AoLQ0Z4q3G9Z0IiMeK0JfKMxmiUdNuJXqzu.dgBmetux9u3m','586-044-1929x86222','943 Mohammed Harbors',NULL,'West Porter','CO','05042',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-17 20:22:06','2014-06-17 20:22:06'),(12,NULL,'raul34@jenkins.com','Manley','Osinski',NULL,'$2y$10$K0eG6EppWoaavK4AC6Ew2ev7s9kavvTwVylNddQNm56RGsigT0z0u','653.015.4482','641 Kyla Spring Apt. 399',NULL,'Schusterland','CO','51110-0263',0,NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,'2014-06-17 20:22:06','2014-06-17 20:22:06');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -255,7 +255,7 @@ CREATE TABLE `users_groups` (
 
 LOCK TABLES `users_groups` WRITE;
 /*!40000 ALTER TABLE `users_groups` DISABLE KEYS */;
-INSERT INTO `users_groups` VALUES (1,1),(2,1),(2,2),(3,1),(4,1),(5,1),(6,1),(7,1),(8,1),(9,1),(10,1),(11,1),(12,1),(13,1),(14,1),(15,1),(16,1),(17,1),(18,1),(19,1),(20,1),(21,1),(22,1),(23,1),(24,1),(25,1),(26,1),(27,1),(28,1),(29,1),(30,1),(31,1),(32,1),(33,1),(34,1),(35,1),(36,1),(37,1),(38,1),(39,1),(40,1),(41,1),(42,1),(43,1),(44,1),(45,1),(46,1),(47,1),(48,1),(49,1),(50,1),(51,1),(52,1),(53,1),(54,1),(55,1),(56,1),(57,1),(58,1),(59,1),(60,1),(61,1),(62,1),(63,1),(64,1),(65,1),(66,1),(67,1),(68,1),(69,1),(70,1),(71,1),(72,1),(73,1),(74,1),(75,1),(76,1),(77,1),(78,1),(79,1),(80,1),(81,1),(82,1),(83,1),(84,1),(85,1),(86,1),(87,1),(88,1),(89,1),(90,1),(91,1),(92,1),(93,1),(94,1),(95,1),(96,1),(97,1),(98,1),(99,1),(100,1),(101,1),(102,1);
+INSERT INTO `users_groups` VALUES (1,1),(2,1),(2,2),(3,1),(4,1),(5,1),(6,1),(7,1),(8,1),(9,1),(10,1),(11,1),(12,1);
 /*!40000 ALTER TABLE `users_groups` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -268,4 +268,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-06-15 10:26:31
+-- Dump completed on 2014-06-17 14:25:41
