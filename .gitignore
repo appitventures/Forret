@@ -20,3 +20,4 @@ _ide_helper.php
 /public/assets/flex/*
 tests/_output/*
 /app/config/ec2
+.ec2.php
