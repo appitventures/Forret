@@ -1,5 +1,5 @@
 ## Forret: L4 Foundation
-Demo of [Admin Panel](http://forret.appitdemo.com/admin/login)
+Demo of [Admin Panel](http://forret.io/admin/login) (in the process of moving to a new domain. Demo may be down)
   * username = admin@forret.com | password = password
 
 ### Overview

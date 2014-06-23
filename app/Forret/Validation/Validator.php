@@ -1,8 +1,6 @@
 <?php namespace Forret\Validation;
 
-use Respect\Validation\Exceptions\AbstractNestedException;
-use Respect\Validation\Exceptions\AllOfException;
-use Respect\Validation\Exceptions\KeyException;
+use Respect\Validation\Exceptions\AbstractGroupedException;
 use Respect\Validation\Exceptions\LengthException;
 use Respect\Validation\Exceptions\PhoneException;
 use Respect\Validation\Validator as v;
@@ -16,7 +14,7 @@ abstract class Validator {
 
     public function validate(v $validator,$data,$errorMessage,$errorFields){
         try {$validator->check($data);}
-        catch (AbstractNestedException $e) {
+        catch (AbstractGroupedException $e) {
             $errors = $e->findMessages($errorFields);
             throw new ValidationException($errorMessage,$errors);
         }

@@ -11,8 +11,8 @@ settings:
 modules:
     config:
         Db:
-            dsn: 'mysql:host=localhost;dbname=solum_codeception_testing'
-            user: 'solum_codecept'
+            dsn: 'mysql:host=localhost;dbname=forret_codeception_testing'
+            user: 'forret_codecept'
             password: 'codeceptpass'
             dump: app/database/dump.sql
             cleanup: false

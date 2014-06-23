@@ -5,7 +5,7 @@ return array(
     'connections' => array(
         'mysql' => array(
             'database'  => 'forret_codeception_testing',
-            'username'  => 'forretuser',
+            'username'  => 'forret_codecept',
             'password'  => 'forretpass15243'
         ),
     ),
