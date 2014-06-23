@@ -23,7 +23,15 @@ $app = new Illuminate\Foundation\Application;
 | given environment, then we will automatically detect it for you.
 |
 */
-
+$env = $app->detectEnvironment(function(){
+    if(file_exists(__DIR__.'/../.env_name.php')){
+        return include(__DIR__.'/../.env_name.php');
+    }
+    else{
+        return 'production';
+    }
+});
+/*
 $env = $app->detectEnvironment(array(
 
     // Development
@@ -35,7 +43,7 @@ $env = $app->detectEnvironment(array(
     // Production
     // production is default, so we don't need to specify any detection
 ));
-
+*/
 /*
 |--------------------------------------------------------------------------
 | Bind Paths

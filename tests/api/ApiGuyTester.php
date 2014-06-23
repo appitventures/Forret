@@ -1699,6 +1699,19 @@ class ApiGuyTester extends \Codeception\Actor
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
+     * Adds Bearer authentication via access token.
+     *
+     * @param $accessToken
+     * @see \Codeception\Module\REST::amBearerAuthenticated()
+     */
+    public function amBearerAuthenticated($accessToken) {
+        return $this->scenario->runStep(new \Codeception\Step\Condition('amBearerAuthenticated', func_get_args()));
+    }
+
+ 
+    /**
+     * [!] Method is generated. Documentation taken from corresponding module.
+     *
      * Sends a POST request to given uri.
      *
      * Parameters and files (as array of filenames) can be provided.
