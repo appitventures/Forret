@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- bootstrap 3.0.2 -->
-    {{ asset("/assets/adminlte/css/bootstrap.min.css") }}
+    {{ HTML::style('/assets/adminlte/css/bootstrap.min.css') }}
     <!-- font Awesome -->
-    {{ asset("/assets/adminlte/css/font-awesome.min.css") }}
+    {{ HTML::style('/assets/adminlte/css/font-awesome.min.css') }}
     <!-- Theme style -->
-    {{ asset("/assets/adminlte/css/AdminLTE.css") }}
-
+    {{ HTML::style('/assets/adminlte/css/AdminLTE.css') }}
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    {{ asset("https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js") }}
-    {{ asset("https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js") }}
+    {{ HTML::script('https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js') }}
+    {{ HTML::script('https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js') }}
     <![endif]-->
     <title>
         <?php
