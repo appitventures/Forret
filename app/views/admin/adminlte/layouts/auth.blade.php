@@ -63,7 +63,7 @@
 <!-- jQuery 2.0.2 -->
 {{ HTML::script('http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js') }}
 <!-- Bootstrap -->
-{{ HTML::script('assets/adminlte/js/bootstrap.min.js') }}
+{{ HTML::script('/assets/adminlte/js/bootstrap.min.js') }}
 
 </body>
 </html>
