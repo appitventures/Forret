@@ -61,9 +61,9 @@
 
 
 <!-- jQuery 2.0.2 -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+{{ HTML::script('http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js') }}
 <!-- Bootstrap -->
-<script src="assets/adminlte/js/bootstrap.min.js" type="text/javascript"></script>
+{{ HTML::script('assets/adminlte/js/bootstrap.min.js') }}
 
 </body>
 </html>
