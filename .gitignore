@@ -21,3 +21,4 @@ _ide_helper.php
 tests/_output/*
 /app/config/ec2
 .ec2.php
+.env_name.php
