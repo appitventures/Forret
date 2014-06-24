@@ -18,8 +18,5 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::group(['after'=>'frontend.action'],function(){
-    Route::get('testnew',function(){
-        return 'new route';
-    });
     include('routes/Frontend/routes.php');
 });
