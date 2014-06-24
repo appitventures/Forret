@@ -22,4 +22,6 @@ tests/_output/*
 /app/config/ec2
 .ec2.php
 .env_name.php
-.env*
+.env.development.php
+.env.preprod.php
+.env.prod.php

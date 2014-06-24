@@ -1,4 +1,4 @@
-<?php  namespace controllers\Frontend;
+<?php  namespace Controllers\Frontend;
 
 use Input;
 use View;
@@ -17,7 +17,7 @@ class DashboardController extends BaseController {
             echo "</pre>";
         }
         else{
-            return View::make('Admin::pages.dashboard', $view);
+            return View::make('Frontend::pages.homepage', $view);
         }
     }
 } 

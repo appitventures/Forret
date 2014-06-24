@@ -32,7 +32,8 @@
 		"psr-0": {
             "Forret": "app/",
             "Controllers\\Api": "app/",
-            "Controllers\\Admin": "app/"
+            "Controllers\\Admin": "app/",
+            "controllers\\Frontend": "app/"
 		}
 	},
     "scripts": {

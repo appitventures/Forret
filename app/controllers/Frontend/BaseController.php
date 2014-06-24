@@ -1,4 +1,4 @@
-<?php  namespace controllers\Frontend;
+<?php  namespace Controllers\Frontend;
 
 use Controller;
 use View;
