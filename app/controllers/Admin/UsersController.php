@@ -1,8 +1,13 @@
 <?php  namespace Controllers\Admin;
+use Cartalyst\Sentry\Users\UserExistsException;
 use Dingo\Api\Auth\Shield;
 use Dingo\Api\Dispatcher;
+use Dingo\Api\Exception\StoreResourceFailedException;
+use Forret\Exceptions\ValidationException;
+use Respect\Validation\Exceptions\AbstractNestedException;
 use \View;
 use Input;
+use Redirect;
 
 class UsersController extends BaseController {
 
@@ -47,7 +52,24 @@ class UsersController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+        try{
+            $this->api->post('users',Input::all());
+            $view['title'] = 'Users';
+            return View::make('Admin::pages.users.index',$view);
+        }
+        catch(ValidationException $e){
+            return Redirect::back()->withErrors($e->getMessage())->withInput();
+        }
+        catch(UserExistsException $e){
+            return Redirect::back()->withErrors($e->getMessage())->withInput();
+        }
+        catch(AbstractNestedException $e){
+            return Redirect::back()->withErrors($e->getMessage())->withInput();
+        }
+        catch(StoreResourceFailedException $e){
+            return Redirect::back()->withErrors($e->getMessage())->withInput();
+        }
+
 	}
 
 	/**
@@ -99,7 +121,7 @@ class UsersController extends BaseController {
 	}
 
     public function search(){
-        $view['users'] = $this->api->get('users/search',[Input::all()]);
+        $view['users'] = $this->api->get('users/search',Input::all());
         $view['title'] = 'Search Results';
         return View::make('Admin::pages.users.search',$view);
     }

@@ -1,7 +1,7 @@
 <?php
 Route::post('queue/post', function () {return Queue::marshal();});
 
-Route::api(['version'=>'v1','prefix'=>'api','after'=>'api.action'],function() {
+Route::api(['version'=>'v1','prefix'=>'api'],function() {
     Route::get('/', 'Controllers\Api\SessionsController@index');
     Route::post('login', 'Controllers\Api\SessionsController@store');
     Route::get('logout', 'Controllers\Api\SessionsController@destroy');
@@ -16,8 +16,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('login',['uses'=>'Controllers\Admin\SessionsController@store']);
     include('routes/Admin/routes.php');
 });
-
-Route::group(['after'=>'frontend.action'],function(){
+Route::group(['namespace'=>'Controllers\Frontend'],function(){
     Route::get('testnew',function(){
         return 'new route';
     });

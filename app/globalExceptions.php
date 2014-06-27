@@ -8,6 +8,7 @@ use Respect\Validation\Exceptions\ValidationException;
 App::error(function(Exception $exception, $code)
 {
     Log::error($exception);
+    #return Redirect::to('/admin');
 });
 
 API::error(function(ModelNotFoundException $e){
