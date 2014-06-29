@@ -25,6 +25,21 @@
                 <li class="page-scroll">
                     <a href="#contact">Contact</a>
                 </li>
+                @if($auth_navbar == 1)
+                    <li>
+                        <a href = '/users'>My Account</a>
+                    </li>
+                    <li>
+                        <a href = '/logout'>Logout</a>
+                    </li>
+                @else
+                    <li>
+                        <a href = '/login'>Login</a>
+                    </li>
+                    <li>
+                        <a href = '/register'>Register</a>
+                    </li>
+                @endif
             </ul>
         </div>
         <!-- /.navbar-collapse -->
