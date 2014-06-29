@@ -8,7 +8,8 @@ class DashboardController extends BaseController {
 
     }
     public function index() {
-        $view['title'] = 'Title';
+        $view['title'] = 'Forret Starter Kit';
+        $view['sections'] = ['about','intro','download','contact'];
         return View::make('Frontend::pages.home',$view);
     }
 } 
