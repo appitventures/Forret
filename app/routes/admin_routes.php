@@ -1,4 +1,7 @@
 <?php
+Route::get('login',['as'=>'adminlogin','uses'=>'Controllers\Admin\SessionsController@create']);
+Route::post('login',['uses'=>'Controllers\Admin\SessionsController@store']);
+
 
 Route::get('/', 'Controllers\Admin\DashboardController@index');
 Route::get('users/search','Controllers\Admin\UsersController@search');

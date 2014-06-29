@@ -1,4 +1,12 @@
 <?php
+Route::get('/', 'Controllers\Api\SessionsController@index');
+Route::post('login', 'Controllers\Api\SessionsController@store');
+Route::get('logout', 'Controllers\Api\SessionsController@destroy');
+Route::post('/forgotPassword', 'Controllers\Api\UsersController@postForgotPassword');
+Route::get('/resetPassword', 'Controllers\Api\UsersController@getResetPassword');
+Route::post('/resetPassword', 'Controllers\Api\UsersController@postResetPassword');
+Route::get('/activate', 'Controllers\Api\UsersController@getActivate');
+
 
 Route::get("users/search",'Controllers\Api\UsersController@search');
 Route::resource('users', 'Controllers\Api\UsersController');
