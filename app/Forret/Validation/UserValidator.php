@@ -21,10 +21,9 @@ class UserValidator extends Validator
             ->key('address1',V::string()->length(0,150),false)
             ->key('city',V::string()->length(0,150),false)
             ->key('state',V::string()->length(2),false)
-            ->key('zip',V::string()->length(5,10),false)
-            ->key('password', V::string()->notEmpty()->length(0, 200));
+            ->key('zip',V::string()->length(5,10),false);
         $errorMessage = 'Error creating user';
-        $errorFields = ['email','first_name','last_name','password','profile','phone_number','address1','city','state','zip'];
+        $errorFields = ['email','first_name','last_name','profile','phone_number','address1','city','state','zip'];
         $this->validate($validator,$data,$errorMessage,$errorFields);
     }
 

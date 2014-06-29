@@ -1,13 +1,18 @@
 <?php  namespace Controllers\Frontend;
 
-class SessionsController extends BaseController{
+use \Input;
+use \View;
+
+class SessionsController extends BaseController {
     public function __construct(){
 
     }
 
     public function create(){
-        $view['title'] = 'Login';
-        return View::make('Frontend::pages.auth.login',$view);
+        return 'form for login';
     }
 
-} 
+    public function store(){
+        return 'log user in';
+    }
+}

@@ -8,8 +8,7 @@
 
 $adminTheme = 'adminlte';
 View::addNamespace('Admin',__DIR__.'/../views/admin/'.$adminTheme);
-
-$frontendTheme = 'themeName';
+$frontendTheme = 'raelina';
 View::addNamespace('Frontend',__DIR__.'/../views/frontend/'.$frontendTheme);
 
 

@@ -6,6 +6,7 @@ use Forret\Exceptions\ValidationException;
 use Forret\Interfaces\UserInterface;
 use Input;
 use Redirect;
+use Respect\Validation\Exceptions\NotEmptyException;
 use View;
 use Mail;
 use Sentry;
@@ -15,7 +16,7 @@ class UsersController extends BaseController {
         $this->user = $user;
 
         $this->beforeFilter('api.auth',['only'=>['show','update']]);
-        $this->beforeFilter('api.isAdmin',['only'=>['index','destroy','search']]);
+        $this->beforeFilter('api.isAdmin',['only'=>['destroy','search']]);
     }
     public function index() {
         return $this->user->recent25();
@@ -30,6 +31,9 @@ class UsersController extends BaseController {
         }
         catch(UserExistsException $e){
             throw new StoreResourceFailedException('user already exists');
+        }
+        catch(NotEmptyException $e){
+            throw new StoreResourceFailedException($e->getMessage());
         }
     }
     public function show($id) {
@@ -50,6 +54,7 @@ class UsersController extends BaseController {
     }
 
     public function search(){
+
         return $this->user->search(Input::all());
     }
 

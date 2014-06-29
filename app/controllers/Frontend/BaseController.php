@@ -1,9 +1,12 @@
-<?php  namespace Controllers\Frontend;
+<?php namespace Controllers\Frontend;
 
-use Controller;
+use Illuminate\Routing\Controller;
 use View;
 
-class BaseController extends Controller{
+/**
+ * Class BaseController
+ */
+class BaseController extends Controller {
 
     /**
      *
@@ -17,9 +20,11 @@ class BaseController extends Controller{
      *
      * @return void
      */
+
     protected function setupLayout() {
         if (!is_null($this->layout)) {
             $this->layout = View::make($this->layout);
         }
     }
-} 
+
+}

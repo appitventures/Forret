@@ -2,6 +2,7 @@
 
 use Respect\Validation\Exceptions\AbstractGroupedException;
 use Respect\Validation\Exceptions\LengthException;
+use Respect\Validation\Exceptions\NotEmptyException;
 use Respect\Validation\Exceptions\PhoneException;
 use Respect\Validation\Validator as v;
 use Forret\Exceptions\ValidationException;
@@ -23,6 +24,14 @@ abstract class Validator {
             throw new ValidationException($errorMessage,$errors);
         }
         catch(PhoneException $e){
+            $errors = [$e->getMessage()];
+            throw new ValidationException($errorMessage,$errors);
+        }
+        catch(NotEmptyException $e){
+            $errors = [$e->getMessage()];
+            throw new ValidationException($errorMessage,$errors);
+        }
+        catch(\Exception $e){
             $errors = [$e->getMessage()];
             throw new ValidationException($errorMessage,$errors);
         }
