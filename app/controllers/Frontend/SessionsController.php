@@ -9,7 +9,10 @@ class SessionsController extends BaseController {
     }
 
     public function create(){
-        return 'form for login';
+        $view['title'] = 'Forret - Login';
+        $view['auth_navbar'] = false;
+        $view['sections'] = ['login','contact'];
+        return View::make('Frontend::pages.home',$view);
     }
 
     public function store(){

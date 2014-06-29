@@ -33,7 +33,7 @@
             "Forret": "app/",
             "Controllers\\Api": "app/",
             "Controllers\\Admin": "app/",
-            "controllers\\Frontend": "app/"
+            "Controllers\\Frontend": "app/"
 		}
 	},
     "scripts": {

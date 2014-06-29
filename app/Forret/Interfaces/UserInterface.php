@@ -10,4 +10,6 @@ interface UserInterface {
     public function privatePage($user_id);
     public function undestroy($id);
     public function search($input);
+
+    public function getCurrentSentryUser();
 } 

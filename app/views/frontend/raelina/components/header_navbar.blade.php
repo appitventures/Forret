@@ -27,7 +27,7 @@
                 </li>
                 @if($auth_navbar == 1)
                     <li>
-                        <a href = '/users'>My Account</a>
+                        <a href = "/users/{{$user->id}}">My Account</a>
                     </li>
                     <li>
                         <a href = '/logout'>Logout</a>

@@ -108,4 +108,8 @@ class UserRepository extends BaseRepository implements UserInterface {
     private function scopeSearch($query,$field,$search){
         return $query->where($field,'LIKE','%'.$search.'%');
     }
+
+    public function getCurrentSentryUser(){
+        return Sentry::getUser();
+    }
 } 
