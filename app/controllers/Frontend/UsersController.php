@@ -9,11 +9,6 @@ class UsersController extends BaseController{
         $this->user = $user;
     }
 
-    public function index(){
-        $view['title'] = 'User Profile';
-        return View::make('Frontend::pages.users.profile',$view);
-    }
-
     public function show($user_id){
         $view['title'] = 'Forret - Profile';
         $view['auth_navbar'] = 1;

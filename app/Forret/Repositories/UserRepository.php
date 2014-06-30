@@ -10,7 +10,7 @@ use User;
 class UserRepository implements UserInterface {
     use EloquentRepositoryTrait;
     /**
-     * @var User
+     * @var \Eloquent
      */
     private $user;
     /**
@@ -46,15 +46,13 @@ class UserRepository implements UserInterface {
     }
 
     public function manuallyActivate($id){
-        $user = User::find($id);
-        $user->activated = 1;
-        $user->activated_at = Carbon::now()->toDateTimeString();
-        $user->save();
+        $user = $this->findById($id);
+        $user->update(['activated' => 1,'activated_at' => Carbon::now()->toDateTimeString()]);
         return $user;
     }
 
     public function recent25(){
-        return User::orderBy('created_at','desc')->limit(25)->get();
+        return $this->user->orderBy('created_at','desc')->limit(25)->get();
     }
 
     public function getSentryUser($id){
@@ -65,13 +63,12 @@ class UserRepository implements UserInterface {
         if(!Sentry::check()) {
             throw new AccessDeniedHttpException();
         }
-        if($user_id != Sentry::getUser()->getId()){
-            if(!Sentry::getUser()->inGroup(Sentry::getGroupProvider()->findByName('Admins'))) {
+        if($user_id != $this->getCurrentSentryUser()->getId()){
+            if(!Sentry::getUser()->inGroup(Sentry::findGroupByName('Admins'))) {
                 throw new AccessDeniedHttpException();
             }
         }
     }
-
 
     public function getCurrentSentryUser(){
         return Sentry::getUser();

@@ -10,6 +10,9 @@ use Mail;
 use Sentry;
 
 class UsersController extends BaseController {
+
+    /** @var \Forret\Repositories\UserRepository  */
+    protected $user;
     public function __construct(UserInterface $user){
         $this->user = $user;
 
@@ -30,11 +33,11 @@ class UsersController extends BaseController {
         }
     }
     public function show($id) {
-        return $this->user->find($id);
+        return $this->user->findById($id);
     }
 
     public function destroy($id){
-        return $this->user->destroy($id);
+        return $this->user->deleteById($id);
     }
 
     public function undestroy($id){
@@ -43,7 +46,7 @@ class UsersController extends BaseController {
 
     public function update($id){
         $this->user->privatePage($id);
-        return $this->user->update($id,Input::all());
+        return $this->user->updateExisting($id,Input::all());
     }
 
     public function search(){
