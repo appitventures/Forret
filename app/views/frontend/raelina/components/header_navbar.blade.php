@@ -42,7 +42,26 @@
                 @endif
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->
 </nav>
+<div class = 'row' style="margin-top:100px;">
+    <div class = 'col-sm-5'></div>
+    <div class = 'col-sm-2'>
+        @if(Session::has('message'))
+            <div class="alert alert-success" style="display: block;">
+                <button class="close" data-close="alert"></button>
+                <span>{{Session::get('message')}}</span>
+            </div>
+        @endif
+        @if(Session::has('errors'))
+            <div class="alert alert-danger" style="display: block;">
+                <button class="close" data-close="alert"></button>
+                <span>
+                    @foreach($errors->all() as $message)
+                        {{$message}}
+                    @endforeach
+                </span>
+            </div>
+        @endif
+    </div>
+</div>
