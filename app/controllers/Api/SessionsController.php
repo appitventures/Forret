@@ -5,12 +5,10 @@ use Sentry;
 use Dingo\Api\Exception\ResourceException;
 use Input;
 use Forret\Exceptions\ValidationException;
-use Forret\Validation\UserValidator;
 use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 
 class SessionsController extends BaseController {
-    public function __construct(UserValidator $validator){
-        $this->isValid = $validator;
+    public function __construct(){
 
         $this->beforeFilter('api.auth',['only'=>['index']]);
     }
@@ -24,12 +22,11 @@ class SessionsController extends BaseController {
 
 
     public function destroy() {
-        return Sentry::logout();
+        Sentry::logout();
     }
 
     public function store() {
         try {
-            $this->isValid->forLogin(Input::all());
             Sentry::authenticate(Input::only('email', 'password'), Input::get('remember-me', 0));
             return Sentry::getUser();
         }

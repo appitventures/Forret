@@ -22,4 +22,12 @@ class UsersController extends BaseController{
         return View::make('Frontend::pages.profile',$view);
     }
 
+    public function create(){
+        $view['title'] = 'Forret - Register';
+        $view['auth_navbar'] = 0;
+        $view['user'] = [];
+        $view['sections'] = ['register'];
+        return View::make('Frontend::pages.profile',$view);
+    }
+
 } 

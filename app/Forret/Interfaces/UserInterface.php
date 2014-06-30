@@ -1,15 +1,25 @@
 <?php  namespace Forret\Interfaces;
 
-interface UserInterface {
+interface UserInterface extends EloquentInterface {
+    /**
+     * @return mixed
+     */
     public function all();
-    public function find($id);
-    public function createNew($data);
-    public function destroy($id);
-    public function update($id,$data);
-    public function recent25();
-    public function privatePage($user_id);
-    public function undestroy($id);
-    public function search($input);
 
+    /**
+     * @return mixed
+     */
+    public function recent25();
+
+    /**
+     * @param $user_id
+     * @return mixed
+     */
+    public function privatePage($user_id);
+
+
+    /**
+     * @return mixed
+     */
     public function getCurrentSentryUser();
 } 

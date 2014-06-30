@@ -1,42 +1,38 @@
 <?php  namespace Forret\Repositories;
 use Carbon\Carbon;
-use Dingo\Api\Exception\ResourceException;
 use Forret\Interfaces\UserInterface;
-use Sentry;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use User;
-use Forret\Validation\UserValidator;
 use Forret\Mailers\UserMailer;
+use Sentry;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+use User;
 
 
-class UserRepository extends BaseRepository implements UserInterface {
-    protected $validator;
+class UserRepository implements UserInterface {
+    use EloquentRepositoryTrait;
+    /**
+     * @var User
+     */
+    private $user;
+    /**
+     * @var UserMailer
+     */
+    private $mail;
 
-    public function __construct(User $user, UserValidator $validator, UserMailer $mail){
+    /**
+     * @param User $user
+     * @param UserMailer $mail
+     */
+    public function __construct(User $user, UserMailer $mail){
         $this->user = $user;
-        $this->isValid = $validator;
         $this->mail = $mail;
-        parent::__construct();
     }
 
     public function all(){
         return $this->user->all();
     }
 
-    public function find($id){
-        try{
-            return $this->user->findOrFail($id);
-        }
-        catch(ModelNotFoundException $e){
-            throw new NotFoundHttpException();
-        }
-    }
-
-    public function createNew($input){
-        $this->isValid->forCreate($input);
-        $user = Sentry::register($input);
+    public function createNew(array $attributes){
+        $user = Sentry::register($attributes);
         $activationCode = $user->getActivationCode();
         $data = [
             'detail'=>'Account activation mail',
@@ -61,17 +57,6 @@ class UserRepository extends BaseRepository implements UserInterface {
         return User::orderBy('created_at','desc')->limit(25)->get();
     }
 
-    public function update($id,$data){
-        $this->isValid->forUpdate($data);
-        $user = $this->user->find($id);
-        $user->fill($data)->update();
-        return $user;
-    }
-    public function destroy($id){
-        $user = Sentry::findUserById($id);
-        $user->delete();
-    }
-
     public function getSentryUser($id){
         return Sentry::findUserById($id);
     }
@@ -87,27 +72,6 @@ class UserRepository extends BaseRepository implements UserInterface {
         }
     }
 
-    public function undestroy($id){
-        $user = User::withTrashed()->find($id);
-        if($user->trashed()){
-            $user->restore();
-            return User::find($id);
-        }
-        throw new ResourceException('User Not Found');
-    }
-
-    public function search($input){
-        $this->isValid->forSearch($input);
-        $users = $this->user->where('activated','=',1);
-        foreach($input as $field => $search){
-            $users->where($field,'LIKE',"%$search%");
-        }
-        return $users->get();
-    }
-
-    private function scopeSearch($query,$field,$search){
-        return $query->where($field,'LIKE','%'.$search.'%');
-    }
 
     public function getCurrentSentryUser(){
         return Sentry::getUser();

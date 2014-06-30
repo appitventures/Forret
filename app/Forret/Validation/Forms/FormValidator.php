@@ -1,31 +1,67 @@
-<?php
-namespace Forret\Validation\Forms;
+<?php namespace Forret\Validation\Forms;
 
-use Forret\Exceptions\FormValidationException;
+use Forret\Exceptions\ValidationException;
 use Illuminate\Validation\Factory as Validator;
+use Illuminate\Validation\Validator as ValidatorInstance;
 
 abstract class FormValidator {
+
+    /**
+     * @var Validator
+     */
     protected $validator;
+
+    /**
+     * @var ValidatorInstance
+     */
     protected $validation;
 
-    public function __construct(Validator $validator){
+    /**
+     *
+     * @param Validator $validator
+     */
+    function __construct(Validator $validator)
+    {
         $this->validator = $validator;
     }
 
-    public function validate(array $formData){
+    /**
+     * Validate the form data
+     *
+     * @param array $formData
+     * @return mixed
+     * @throws ValidationException
+     */
+    public function validate(array $formData)
+    {
         $this->validation = $this->validator->make($formData, $this->getValidationRules());
-        if($this->validation->fails()){
-            throw new FormValidationException('Validation Failed', $this->getValidationErrors());
+
+        if ($this->validation->fails())
+        {
+            throw new ValidationException('Validation failed', $this->getValidationErrors());
         }
+
         return true;
     }
 
-    protected function getValidationRules() {
+    /**
+     * Get the validation rules
+     *
+     * @return array
+     */
+    protected function getValidationRules()
+    {
         return $this->rules;
     }
 
-    protected  function getValidationErrors() {
+    /**
+     * Get the validation errors
+     *
+     * @return \Illuminate\Support\MessageBag
+     */
+    protected function getValidationErrors()
+    {
         return $this->validation->errors();
     }
 
-} 
+}

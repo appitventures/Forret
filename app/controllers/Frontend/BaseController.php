@@ -1,6 +1,6 @@
 <?php namespace Controllers\Frontend;
 
-use Illuminate\Routing\Controller;
+use Dingo\Api\Routing\Controller;
 use View;
 
 /**

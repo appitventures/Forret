@@ -1,14 +1,33 @@
 <?php namespace Forret\Exceptions;
 
 use Dingo\Api\Exception\ResourceException;
+use Illuminate\Support\MessageBag;
 
 class ValidationException extends ResourceException {
-    public function __construct($message, $context){
-        // strip out empty context keys
-        $context = array_filter($context, function($value){
-            return strlen(trim($value)) !== 0;
-        });
-        parent::__construct($message, $context);
+    /**
+     * @var MessageBag
+     */
+    protected $errors;
+
+    /**
+     * @param string     $message
+     * @param MessageBag $errors
+     */
+    function __construct($message, MessageBag $errors)
+    {
+        $this->errors = $errors;
+
+        parent::__construct($message);
+    }
+
+    /**
+     * Get form validation errors
+     *
+     * @return MessageBag
+     */
+    public function getErrors()
+    {
+        return $this->errors;
     }
 
 }

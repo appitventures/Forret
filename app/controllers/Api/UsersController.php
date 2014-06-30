@@ -2,11 +2,9 @@
 
 use Cartalyst\Sentry\Users\UserExistsException;
 use Dingo\Api\Exception\StoreResourceFailedException;
-use Forret\Exceptions\ValidationException;
 use Forret\Interfaces\UserInterface;
 use Input;
 use Redirect;
-use Respect\Validation\Exceptions\NotEmptyException;
 use View;
 use Mail;
 use Sentry;
@@ -24,16 +22,11 @@ class UsersController extends BaseController {
 
     public function store(){
         try {
+
             return $this->user->createNew(Input::all());
-        }
-        catch(ValidationException $e){
-            throw new StoreResourceFailedException($e->getMessage(),$e->getErrors());
         }
         catch(UserExistsException $e){
             throw new StoreResourceFailedException('user already exists');
-        }
-        catch(NotEmptyException $e){
-            throw new StoreResourceFailedException($e->getMessage());
         }
     }
     public function show($id) {

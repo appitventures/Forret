@@ -1,11 +1,22 @@
 <?php namespace Controllers\Api;
 
+use Cartalyst\Sentry\Throttling\UserBannedException;
+use Cartalyst\Sentry\Throttling\UserSuspendedException;
+use Cartalyst\Sentry\Users\UserNotActivatedException;
+use Cartalyst\Sentry\Users\UserNotFoundException;
+use Illuminate\Support\MessageBag;
+use Input;
+use Lang;
 use Sentry;
 use Redirect;
+use Session;
+use Validator;
 use View;
 
 class AuthController extends BaseController {
-    public function __construct(Sentry $sentry){
+    public function __construct(Sentry $sentry,MessageBag $messageBag){
+        $this->messageBag = $messageBag;
+
         $this->sentry = $sentry;
     }
     public function getSignin(){
@@ -18,7 +29,7 @@ class AuthController extends BaseController {
         // Show the page
         return View::make('frontend.auth.signin');
     }
-    public function postSignin(){
+    public function store(){
         // Declare the rules for the form validation
         $rules = array(
             'email'    => 'required|email',
@@ -47,27 +58,28 @@ class AuthController extends BaseController {
             Session::forget('loginRedirect');
 
             // Redirect to the users page
-            return Redirect::to($redirect)->with('success', Lang::get('auth/message.signin.success'));
+            return Sentry::getUser();
         }
-        catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
+        catch (UserNotFoundException $e)
         {
+            throw new
             $this->messageBag->add('email', Lang::get('auth/message.account_not_found'));
         }
-        catch (Cartalyst\Sentry\Users\UserNotActivatedException $e)
+        catch (UserNotActivatedException $e)
         {
             $this->messageBag->add('email', Lang::get('auth/message.account_not_activated'));
         }
-        catch (Cartalyst\Sentry\Throttling\UserSuspendedException $e)
+        catch (UserSuspendedException $e)
         {
             $this->messageBag->add('email', Lang::get('auth/message.account_suspended'));
         }
-        catch (Cartalyst\Sentry\Throttling\UserBannedException $e)
+        catch (UserBannedException $e)
         {
             $this->messageBag->add('email', Lang::get('auth/message.account_banned'));
         }
 
         // Ooops.. something went wrong
-        return Redirect::back()->withInput()->withErrors($this->messageBag);
+        return $this->messageBag;
     }
     public function getSignup(){
         // Is the user logged in?
