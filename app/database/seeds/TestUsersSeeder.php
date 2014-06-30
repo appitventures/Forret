@@ -4,24 +4,39 @@
 use Faker\Factory as Faker;
 use Carbon\Carbon;
 
+/**
+ * @property mixed admin
+ * @property mixed admin1
+ * @property mixed user1
+ */
 class TestUsersSeeder extends Seeder {
+    /** @var  \User */
+    protected $user;
+
+    /**
+     *
+     */
     public function run() {
+        $this->user = new User();
+        $this->admin = new User();
+        $this->user1 = new User();
+        $this->admin1 = new User();
         $faker = Faker::create();
         $userEmail = 'user@forret.io';
         $adminEmail = 'admin@forret.io';
 
-        $useruser = Sentry::register(['email' => $userEmail,'password' => 'password','first_name' => $faker->firstName,'last_name' => $faker->lastName]);
+        $this->user->fill(['email' => $userEmail,'password' => 'password','first_name' => $faker->firstName,'last_name' => $faker->lastName])->forceSave();
+        $useruser = Sentry::findUserByLogin($userEmail);
+        $id = $useruser->getId();
         $useruser->addGroup(Sentry::getGroupProvider()->findByName('Users'));
-        $user = User::find($useruser->getId());
-        $user->activated = 1;
-        $user->activated_at = Carbon::now()->toDateTimeString();
-        $user->save();
-        $adminUser = Sentry::register(['email' => $adminEmail,'password' => 'password','first_name' => $faker->firstName,'last_name' => $faker->lastName]);
+        User::find($id)->update(['activated' => 1,'activated_at' => Carbon::now()->toDateTimeString()]);
+
+
+        $this->admin->fill(['email' => $adminEmail,'password' => 'password','first_name' => $faker->firstName,'last_name' => $faker->lastName])->forceSave();
+        $adminUser = Sentry::findUserByLogin($adminEmail);
+        $id = $adminUser->getId();
         $adminUser->addGroup(Sentry::getGroupProvider()->findByName('Users'));
         $adminUser->addGroup(Sentry::getGroupProvider()->findByName('Admins'));
-        $admin = User::find($adminUser->getId());
-        $admin->activated = 1;
-        $admin->activated_at = Carbon::now()->toDateTimeString();
-        $admin->save();
+        User::find($id)->update(['activated' => 1,'activated_at' => Carbon::now()->toDateTimeString()]);
     }
 }
