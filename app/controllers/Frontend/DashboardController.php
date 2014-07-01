@@ -23,6 +23,7 @@ class DashboardController extends BaseController {
         $view['auth_navbar'] = $auth_navbar;
         $view['user'] = $user;
         $view['sections'] = ['intro','about','download','contact'];
-        return View::make('Frontend::pages.home',$view);
+        return '4';
+        #return View::make('Frontend::pages.home',$view);
     }
 } 
