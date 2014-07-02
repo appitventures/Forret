@@ -7,7 +7,7 @@
 @section('content')
 
     @foreach($sections as $section)
-        @include("Frontend::components.sections.$section")
+        @include($section)
     @endforeach
 
 @stop

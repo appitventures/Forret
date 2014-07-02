@@ -2,6 +2,7 @@
 
 use Forret\Interfaces\UserInterface;
 use View;
+use Sentry;
 
 class UsersController extends BaseController{
 
@@ -12,8 +13,8 @@ class UsersController extends BaseController{
     public function show($user_id){
         $view['title'] = 'Forret - Profile';
         $view['auth_navbar'] = 1;
-        $view['user'] = $this->user->getCurrentSentryUser();
-        $view['sections'] = [];
+        $view['user'] = Sentry::getUser();
+        $view['sections'] = ["Frontend::components.sections.profile"];
         return View::make('Frontend::pages.profile',$view);
     }
 

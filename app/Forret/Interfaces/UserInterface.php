@@ -16,10 +16,4 @@ interface UserInterface extends EloquentInterface {
      * @return mixed
      */
     public function privatePage($user_id);
-
-
-    /**
-     * @return mixed
-     */
-    public function getCurrentSentryUser();
 } 

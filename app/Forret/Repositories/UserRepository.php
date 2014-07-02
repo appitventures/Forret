@@ -55,22 +55,11 @@ class UserRepository implements UserInterface {
         return $this->user->orderBy('created_at','desc')->limit(25)->get();
     }
 
-    public function getSentryUser($id){
-        return Sentry::findUserById($id);
-    }
-
     public function privatePage($user_id){
-        if(!Sentry::check()) {
-            throw new AccessDeniedHttpException();
-        }
-        if($user_id != $this->getCurrentSentryUser()->getId()){
+        if($user_id != Sentry::getUser()->getId()){
             if(!Sentry::getUser()->inGroup(Sentry::findGroupByName('Admins'))) {
                 throw new AccessDeniedHttpException();
             }
         }
-    }
-
-    public function getCurrentSentryUser(){
-        return Sentry::getUser();
     }
 } 
