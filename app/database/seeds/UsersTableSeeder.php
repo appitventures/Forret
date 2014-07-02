@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder {
                 'city' => $faker->city,
                 'state' => 'CO',
                 'zip' => '12345'
-            ])->forceSave();
+            ])->save();
             $useruser = Sentry::findUserByLogin($email);
             $userGroup = Sentry::getGroupProvider()->findByName('Users');
             $useruser->addGroup($userGroup);

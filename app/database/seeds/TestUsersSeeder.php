@@ -25,14 +25,14 @@ class TestUsersSeeder extends Seeder {
         $userEmail = 'user@forret.io';
         $adminEmail = 'admin@forret.io';
 
-        $this->user->fill(['email' => $userEmail,'password' => 'password','first_name' => $faker->firstName,'last_name' => $faker->lastName])->forceSave();
+        $this->user->fill(['email' => $userEmail,'password' => 'password','first_name' => $faker->firstName,'last_name' => $faker->lastName])->save();
         $useruser = Sentry::findUserByLogin($userEmail);
         $id = $useruser->getId();
         $useruser->addGroup(Sentry::getGroupProvider()->findByName('Users'));
         User::find($id)->update(['activated' => 1,'activated_at' => Carbon::now()->toDateTimeString()]);
 
 
-        $this->admin->fill(['email' => $adminEmail,'password' => 'password','first_name' => $faker->firstName,'last_name' => $faker->lastName])->forceSave();
+        $this->admin->fill(['email' => $adminEmail,'password' => 'password','first_name' => $faker->firstName,'last_name' => $faker->lastName])->save();
         $adminUser = Sentry::findUserByLogin($adminEmail);
         $id = $adminUser->getId();
         $adminUser->addGroup(Sentry::getGroupProvider()->findByName('Users'));
