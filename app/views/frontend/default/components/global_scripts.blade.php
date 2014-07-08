@@ -4,4 +4,4 @@
 {{HTML::script('http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')}}
 
 <!-- Custom Theme JavaScript -->
-{{HTML::script('/assets/raelina/js/grayscale.js')}}
+{{HTML::script('/assets/defaultFrontend/js/grayscale.js')}}

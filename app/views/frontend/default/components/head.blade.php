@@ -15,4 +15,4 @@
 {{HTML::style('http://fonts.googleapis.com/css?family=Montserrat:400,700')}}
 
 <!-- Custom Theme CSS -->
-{{HTML::style('/assets/raelina/css/grayscale.css')}}
+{{HTML::style('/assets/defaultFrontend/css/grayscale.css')}}
