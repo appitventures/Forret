@@ -32,9 +32,14 @@ The purpose of this application is to provide a starting point for development w
  4. Logging
     * Every page load and api call is logged to the `actions` table via the `Action` model. If `config\queue.php` is set as `sync` the user will have to wait for these rows to be written. If configured for Iron-io however this logging will be done asynchronously.
 
-
 ### Instructions
-While not complex to install instructions will be provided shortly
+This is a Laravel application that is best installed via [Forge](https://forge.laravel.com).  Forge makes dealing with environment variables incredibly easy, see [here](http://mattstauffer.co/blog/laravel-forge-using-environment-variables-for-environment-detection). The below environment variables need to be set
+* DB_DATABASE
+* DB_HOSTNAME
+* DB_USERNAME
+* DB_PASSWORD
+* API_BUGSNAG (set as blank string if not using bug snag)
+* CONF_DEBUG ('true' or 'false' to set debug mode)
 
 ### Links
 * [Laravel4](https://github.com/laravel/laravel/tree/develop)
@@ -51,11 +56,10 @@ While not complex to install instructions will be provided shortly
 * [Respect/Validation](https://github.com/Respect/Validation)
 
 ### Tests
-1. Take my word that it works? Tests to be added.
-
+1. Many tests have currently been added.
 
 ### History
-* put backstory(?) here
+* Forret was originally designed to be a tool for internal use only. Because this became so useful internally, Appit Ventures decided that it would be a good product to make open source and allow the community to utiltize it as well.
 
 ### To Do
 * Swap out Laravel's auth for Oauth2
@@ -63,9 +67,9 @@ While not complex to install instructions will be provided shortly
 * Catch all exceptions and throw the proper Dingo/API exceptions
 * All views for admin panel
 * All views for user frontend
-* Write acceptance tests for api
-* Selenium tests for frontend?
-
+* Continue to write acceptance tests for backend API
+* Selenium tests for frontend
+* Swap out Respect/Validation for either stock Laravel validation or other library
 
 =======
 This Starter kit is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)

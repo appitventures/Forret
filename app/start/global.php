@@ -6,7 +6,7 @@
 */
 
 
-$adminTheme = '386';
+$adminTheme = 'adminlte';
 View::addNamespace('Admin',__DIR__.'/../views/admin/'.$adminTheme);
 $frontendTheme = 'default';
 View::addNamespace('Frontend',__DIR__.'/../views/frontend/'.$frontendTheme);
