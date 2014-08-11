@@ -1,8 +1,8 @@
 ## Forret: L4 Foundation
-Demo of [Admin Panel](http://forret.io/admin/login)
+Demo of ~~[Admin Panel](http://forret.io/admin/login)~~ **temporarily down**
   * username = admin@forret.io | password = password
 
-Demo of [User Frontend](http://forret.io/)
+Demo of ~~[User Frontend](http://forret.io/)~~ **temporarily down**
 
 ### Overview
 The purpose of this application is to provide a starting point for development where the code provided can be copy/pasted and used as an example for future expansion (ie Implementation of a Post object). This demo uses [Laravel 4](https://github.com/laravel/laravel/tree/develop) at its core and [Sentry 2](https://github.com/cartalyst/sentry) for user authentication and roles. The code is seperated into three different "modules", consisting of a User frontend, and an Admin backend. Both of which make internal API calls. The API is built on [Dingo/Api](https://github.com/dingo/api). The admin panel has been built with [AdminLTE](https://github.com/almasaeed2010/AdminLTE). The HTML and views for [Metronic](http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?WT.ac=category_item&WT.z_author=keenthemes) can be provided upon request however the assets will not be as those need to be acquired through ThemeForrest.
