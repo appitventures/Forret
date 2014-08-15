@@ -3,7 +3,7 @@
      * Set your Bugsnag API Key.
      * You can find your API Key on your Bugsnag dashboard.
      */
-    'api_key' => $_ENV['API_BUGSNAG'],
+    'api_key' => 'bugSnagApi',
 
     /**
      * Set which release stages should send notifications to Bugsnag

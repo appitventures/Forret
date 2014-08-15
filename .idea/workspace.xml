@@ -1,0 +1,1581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="296e92f1-e285-4ec2-8eff-7c539bf47c9f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/BaseController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Admin/Controllers/BaseController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Api/Controllers/BaseController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Frontend/Controllers/BaseController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Admin/Controllers/DashboardController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Frontend/Controllers/DashboardController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Forret.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/HomeController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/LoginTestingCest.confirm_I_can_login_with_proper_admin_credentials.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/LoginTestingCest.confirm_I_can_login_with_proper_user_credentials.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/LoginTestingCest.confirm_I_get_a_401_and_proper_message_when_attempting_to_login_with_invalid_email.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/LoginTestingCest.confirm_I_get_a_401_and_proper_message_when_attempting_to_login_with_invalid_password.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Admin/Controllers/SessionsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Api/Controllers/SessionsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Frontend/Controllers/SessionsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/UserCreationTestingCest.confirm_200_when_attempting_to_create_user_with_all_fields_possible.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/UserCreationTestingCest.confirm_201_when_attempting_to_create_user_with_only_required_fields.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/UserCreationTestingCest.confirm_422_and_proper_message_when_attempting_create_a_user_without_email.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/UserCreationTestingCest.confirm_422_and_proper_message_when_attempting_create_a_user_without_first_name.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/UserCreationTestingCest.confirm_422_and_proper_message_when_attempting_create_a_user_without_last_name.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/UserCreationTestingCest.confirm_422_and_proper_message_when_attempting_create_a_user_without_password.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Admin/Controllers/UsersController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Api/Controllers/UsersController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Frontend/Controllers/UsersController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/UsersEndpointTestingCest.confirm_200_when_attempting_to_undestroy_a_destroyed_user.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/UsersEndpointTestingCest.confirm_200_when_attempting_to_update_user_profile_when_logged_in_as_that_user.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/UsersEndpointTestingCest.confirm_200_when_deleting_a_user_if_logged_as_admin.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/UsersEndpointTestingCest.confirm_200_when_viewing_own_profile_if_logged_in.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/UsersEndpointTestingCest.confirm_403_when_attempting_to_update_user_profile_when_logged_in_as_different_user.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/UsersEndpointTestingCest.confirm_403_when_sending_get_to_users_if_not_logged_in.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/UsersEndpointTestingCest.confirm_403_when_trying_to_delete_a_user_if_logged_in_as_user.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/UsersEndpointTestingCest.confirm_403_when_trying_to_delete_a_user_if_not_logged_in.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/UsersEndpointTestingCest.confirm_403_when_viewing_other_users_profile_if_logged_in.fail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_ide_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/local/app.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/local/database.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Admin/filters.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Frontend/filters.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lang/en/reminders.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/report.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/_output/report.tap.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Admin/routes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Api/routes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/Frontend/routes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/services.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\.scrutinizer.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\COVERAGE.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\Forret\Exceptions\FormValidationException.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\Forret\Exceptions\ItemNotFoundException.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\Forret\Exceptions\ValidationException.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\Forret\Interfaces\ActionInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\Forret\Interfaces\EloquentInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\Forret\Interfaces\UserInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\Forret\Mailers\Mailer.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\Forret\Mailers\UserMailer.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\Forret\Providers\BackendServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\Forret\Repositories\ActionRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\Forret\Repositories\EloquentRepositoryTrait.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\Forret\Repositories\UserRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\Forret\Validation\Forms\FormValidator.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\Forret\Validation\Forms\Login.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\config\packages\cartalyst\sentry\config.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\config\packages\lucadegasperi\oauth2-server-laravel\oauth2.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\config\testing\database.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\config\testing\mail.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\controllers\Admin\BaseController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\controllers\Admin\DashboardController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\controllers\Admin\SessionsController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\controllers\Admin\UsersController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\controllers\Api\BaseController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\controllers\Api\SessionsController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\controllers\Api\UsersController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\controllers\Frontend\BaseController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\controllers\Frontend\DashboardController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\controllers\Frontend\SessionsController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\controllers\Frontend\UsersController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\database\dump.sql" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\database\seeds\SentryGroupSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\database\seeds\TestUsersSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\database\seeds\UsersTableSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\database\testing.sqlite" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\filters\adminFilters.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\filters\apiFilters.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\filters\frontendFilters.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\globalExceptions.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\lang\bg\groups.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\lang\bg\pages.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\lang\bg\pagination.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\lang\bg\sessions.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\lang\bg\users.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\lang\bg\validation.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\lang\en\groups.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\lang\en\pages.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\lang\en\sessions.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\lang\en\users.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\listeners.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\routes\admin_routes.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\routes\api_routes.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\routes\frontend_routes.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\storage\clockwork\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\storage\debugbar\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\tests\UserControllerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\components\pageComponents\head.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\components\pageComponents\navbar.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\components\pageComponents\pageFooterScripts.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\layouts\default.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\pages\dashboard.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\components\forms\createUser.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\components\forms\formElements\stateSelect.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\components\pageComponents\pageHeader.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\components\pageComponents\settingsModal.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\components\pageComponents\sidebar.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\layouts\auth.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\logout.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\pages\auth\login.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\pages\auth\register.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\pages\users\create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\pages\users\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\pages\users\search.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\test.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\themeName\layouts\default.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\themeName\pages\auth\login.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\themeName\pages\homepage.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\themeName\pages\users\profile.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\build\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\css\bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\css\docs.css-" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\css\fonts\Fixedsys500c.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\css\fonts\Fixedsys500c.otf" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\css\fonts\Fixedsys500c.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\css\fonts\Fixedsys500c.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\css\fonts\Fixedsys500c.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\ico\apple-touch-icon-114-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\ico\apple-touch-icon-144-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\ico\apple-touch-icon-57-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\ico\apple-touch-icon-72-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\ico\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\ico\favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\8x5overlay.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\bootstrap-docs-readme.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\bootstrap-mdo-sfmoma-01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\bootstrap-mdo-sfmoma-02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\bootstrap-mdo-sfmoma-03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\bs-docs-bootstrap-features.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\bs-docs-masthead-pattern.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\bs-docs-responsive-illustrations.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\bs-docs-twitter-github.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\dos-grid.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\example-sites\8020select.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\example-sites\adoptahydrant.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\example-sites\breakingnews.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\example-sites\fleetio.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\example-sites\gathercontent.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\example-sites\jshint.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\example-sites\kippt.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\example-sites\soundready.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\examples\bootstrap-example-carousel.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\examples\bootstrap-example-fluid.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\examples\bootstrap-example-justified-nav.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\examples\bootstrap-example-marketing-narrow.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\examples\bootstrap-example-marketing.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\examples\bootstrap-example-signin.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\examples\bootstrap-example-starter.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\examples\bootstrap-example-sticky-footer.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\examples\browser-icon-chrome.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\examples\browser-icon-firefox.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\examples\browser-icon-safari.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\examples\slide-01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\examples\slide-02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\examples\slide-03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\grid-baseline-20px.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\less-logo-large.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\img\responsive-illustrations.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\application.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\bootstrap-affix.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\bootstrap-alert.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\bootstrap-button.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\bootstrap-carousel.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\bootstrap-collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\bootstrap-dropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\bootstrap-modal.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\bootstrap-popover.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\bootstrap-scrollspy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\bootstrap-tab.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\bootstrap-tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\bootstrap-transition.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\bootstrap-typeahead.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\google-code-prettify\prettify.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\google-code-prettify\prettify.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\holder\holder.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\html5shiv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\386\js\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\css\grayscale (Geraldine's conflicted copy 2014-06-26).css" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\debug.log" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\packages\teepluss\explore\.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\packages\teepluss\explore\bootstrap\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\packages\teepluss\explore\bootstrap\fonts\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\packages\teepluss\explore\bootstrap\fonts\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\packages\teepluss\explore\bootstrap\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\packages\teepluss\explore\bootstrap\fonts\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\packages\teepluss\explore\bootstrap\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\packages\teepluss\explore\bootstrap\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\packages\teepluss\explore\highlightjs\default.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\packages\teepluss\explore\highlightjs\highlight.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\packages\teepluss\explore\screenshots\sample.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\packages\teepluss\explore\scripts\inherit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\packages\teepluss\explore\scripts\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\packages\teepluss\explore\styles\docs.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\sites\AppIt\Forret\public\packages\teepluss\explore\styles\inherit.css" afterPath="" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\config\packages\lucadegasperi\oauth2-server-laravel\.gitkeep" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/.gitkeep" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\filters.php" afterPath="$PROJECT_DIR$/app/modules/Api/filters.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\.gitkeep" afterPath="$PROJECT_DIR$/tests/_output/.gitignore" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\components\forms\createUser.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/components/forms/createUser.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\components\forms\formElements\stateSelect.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/components/forms/formElements/stateSelect.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\components\pageComponents\pageHeader.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/components/pageComponents/pageHeader.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\components\pageComponents\settingsModal.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/components/pageComponents/settingsModal.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\components\pageComponents\sidebar.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/components/pageComponents/sidebar.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\layouts\auth.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/layouts/auth.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\logout.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/logout.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\pages\auth\login.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/pages/auth/login.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\pages\auth\register.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/pages/auth/register.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\pages\users\create.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/pages/users/create.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\pages\users\index.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/pages/users/index.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\pages\users\search.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/pages/users/search.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\386\test.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/test.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\components\pageComponents\head.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/components/pageComponents/head.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\components\pageComponents\navbar.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/components/pageComponents/navbar.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\components\pageComponents\navbarProfile.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/components/pageComponents/navbarProfile.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\components\pageComponents\pageFooterScripts.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/components/pageComponents/pageFooterScripts.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\layouts\default.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/layouts/default.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\admin\adminlte\pages\dashboard.blade.php" afterPath="$PROJECT_DIR$/app/modules/Admin/views/adminlte/pages/dashboard.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\default\components\global_scripts.blade.php" afterPath="$PROJECT_DIR$/app/modules/Frontend/views/default/components/global_scripts.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\default\components\head.blade.php" afterPath="$PROJECT_DIR$/app/modules/Frontend/views/default/components/head.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\default\components\header_navbar.blade.php" afterPath="$PROJECT_DIR$/app/modules/Frontend/views/default/components/header_navbar.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\default\components\sections\about.blade.php" afterPath="$PROJECT_DIR$/app/modules/Frontend/views/default/components/sections/about.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\default\components\sections\contact.blade.php" afterPath="$PROJECT_DIR$/app/modules/Frontend/views/default/components/sections/contact.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\default\components\sections\download.blade.php" afterPath="$PROJECT_DIR$/app/modules/Frontend/views/default/components/sections/download.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\default\components\sections\intro.blade.php" afterPath="$PROJECT_DIR$/app/modules/Frontend/views/default/components/sections/intro.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\default\components\sections\login.blade.php" afterPath="$PROJECT_DIR$/app/modules/Frontend/views/default/components/sections/login.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\default\components\sections\profile.blade.php" afterPath="$PROJECT_DIR$/app/modules/Frontend/views/default/components/sections/profile.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\default\components\sections\register.blade.php" afterPath="$PROJECT_DIR$/app/modules/Frontend/views/default/components/sections/register.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\default\layouts\default.blade.php" afterPath="$PROJECT_DIR$/app/modules/Frontend/views/default/layouts/default.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\default\pages\home.blade.php" afterPath="$PROJECT_DIR$/app/modules/Frontend/views/default/pages/home.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\default\pages\login.blade.php" afterPath="$PROJECT_DIR$/app/modules/Frontend/views/default/pages/login.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\default\pages\profile.blade.php" afterPath="$PROJECT_DIR$/app/modules/Frontend/views/default/pages/profile.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\app\views\frontend\default\pages\register.blade.php" afterPath="$PROJECT_DIR$/app/modules/Frontend/views/default/pages/register.blade.php" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\css\bootstrap.css" afterPath="$PROJECT_DIR$/public/assets/default/css/bootstrap.css" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\css\bootstrap.min.css" afterPath="$PROJECT_DIR$/public/assets/default/css/bootstrap.min.css" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\css\grayscale.css" afterPath="$PROJECT_DIR$/public/assets/default/css/grayscale.css" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\css\font-awesome.css" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/css/font-awesome.css" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\css\font-awesome.min.css" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/css/font-awesome.min.css" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\fonts\FontAwesome.otf" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/fonts/FontAwesome.otf" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\fonts\fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/fonts/fontawesome-webfont.eot" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\fonts\fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/fonts/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\fonts\fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\fonts\fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/fonts/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\less\bordered-pulled.less" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/less/bordered-pulled.less" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\less\core.less" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/less/core.less" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\less\fixed-width.less" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/less/fixed-width.less" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\less\font-awesome.less" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/less/font-awesome.less" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\less\icons.less" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/less/icons.less" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\less\larger.less" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/less/larger.less" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\less\list.less" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/less/list.less" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\less\mixins.less" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/less/mixins.less" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\less\path.less" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/less/path.less" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\less\rotated-flipped.less" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/less/rotated-flipped.less" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\less\spinning.less" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/less/spinning.less" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\less\stacked.less" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/less/stacked.less" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\less\variables.less" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/less/variables.less" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\scss\_bordered-pulled.scss" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/scss/_bordered-pulled.scss" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\scss\_core.scss" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/scss/_core.scss" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\scss\_fixed-width.scss" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/scss/_fixed-width.scss" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\scss\_icons.scss" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/scss/_icons.scss" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\scss\_larger.scss" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/scss/_larger.scss" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\scss\_list.scss" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/scss/_list.scss" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\scss\_mixins.scss" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/scss/_mixins.scss" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\scss\_path.scss" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/scss/_path.scss" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\scss\_rotated-flipped.scss" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/scss/_rotated-flipped.scss" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\scss\_spinning.scss" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/scss/_spinning.scss" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\scss\_stacked.scss" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/scss/_stacked.scss" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\scss\_variables.scss" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/scss/_variables.scss" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\font-awesome\scss\font-awesome.scss" afterPath="$PROJECT_DIR$/public/assets/default/font-awesome/scss/font-awesome.scss" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\fonts\glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/assets/default/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\fonts\glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/assets/default/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\fonts\glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/assets/default/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\fonts\glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/assets/default/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\img\02triangle.gif" afterPath="$PROJECT_DIR$/public/assets/default/img/02triangle.gif" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\img\downloads-bg.jpg" afterPath="$PROJECT_DIR$/public/assets/default/img/downloads-bg.jpg" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\img\forret_logo-01.png" afterPath="$PROJECT_DIR$/public/assets/default/img/forret_logo-01.png" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\img\forret_logo-02.png" afterPath="$PROJECT_DIR$/public/assets/default/img/forret_logo-02.png" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\img\forret_logo-03.png" afterPath="$PROJECT_DIR$/public/assets/default/img/forret_logo-03.png" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\img\forret_logo-04.png" afterPath="$PROJECT_DIR$/public/assets/default/img/forret_logo-04.png" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\img\forret_tri.gif" afterPath="$PROJECT_DIR$/public/assets/default/img/forret_tri.gif" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\img\impossible_triangle.gif" afterPath="$PROJECT_DIR$/public/assets/default/img/impossible_triangle.gif" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\img\intro-bg.jpg" afterPath="$PROJECT_DIR$/public/assets/default/img/intro-bg.jpg" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\img\triangle.gif" afterPath="$PROJECT_DIR$/public/assets/default/img/triangle.gif" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\js\bootstrap.js" afterPath="$PROJECT_DIR$/public/assets/default/js/bootstrap.js" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\js\bootstrap.min.js" afterPath="$PROJECT_DIR$/public/assets/default/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\js\grayscale.js" afterPath="$PROJECT_DIR$/public/assets/default/js/grayscale.js" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\js\jquery-1.10.2.js" afterPath="$PROJECT_DIR$/public/assets/default/js/jquery-1.10.2.js" />
+      <change type="MOVED" beforePath="C:\sites\AppIt\Forret\public\assets\defaultFrontend\less\grayscale.less" afterPath="$PROJECT_DIR$/public/assets/default/less/grayscale.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/packages/barryvdh/laravel-debugbar/laravel-icon.png" afterPath="$PROJECT_DIR$/public/packages/barryvdh/laravel-debugbar/laravel-icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitattributes" afterPath="$PROJECT_DIR$/.gitattributes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/.htaccess" afterPath="$PROJECT_DIR$/public/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/ExampleTest.php" afterPath="$PROJECT_DIR$/app/tests/ExampleTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/TestCase.php" afterPath="$PROJECT_DIR$/app/tests/TestCase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/app.php" afterPath="$PROJECT_DIR$/app/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artisan" afterPath="$PROJECT_DIR$/artisan" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/auth.php" afterPath="$PROJECT_DIR$/app/config/auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/autoload.php" afterPath="$PROJECT_DIR$/bootstrap/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/testing/cache.php" afterPath="$PROJECT_DIR$/app/config/testing/cache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/compile.php" afterPath="$PROJECT_DIR$/app/config/compile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/packages/bugsnag/bugsnag-laravel/config.php" afterPath="$PROJECT_DIR$/app/config/packages/bugsnag/bugsnag-laravel/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/packages/dingo/api/config.php" afterPath="$PROJECT_DIR$/app/config/packages/dingo/api/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/database.php" afterPath="$PROJECT_DIR$/app/config/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/global.php" afterPath="$PROJECT_DIR$/app/start/global.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/packages/barryvdh/laravel-debugbar/laravel-debugbar.css" afterPath="$PROJECT_DIR$/public/packages/barryvdh/laravel-debugbar/laravel-debugbar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/local.php" afterPath="$PROJECT_DIR$/app/start/local.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/mail.php" afterPath="$PROJECT_DIR$/app/config/mail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lang/en/pagination.php" afterPath="$PROJECT_DIR$/app/lang/en/pagination.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpunit.xml" afterPath="$PROJECT_DIR$/phpunit.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/queue.php" afterPath="$PROJECT_DIR$/app/config/queue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/remote.php" afterPath="$PROJECT_DIR$/app/config/remote.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="$PROJECT_DIR$/public/robots.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/session.php" afterPath="$PROJECT_DIR$/app/config/session.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/testing/session.php" afterPath="$PROJECT_DIR$/app/config/testing/session.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/start.php" afterPath="$PROJECT_DIR$/bootstrap/start.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lang/en/validation.php" afterPath="$PROJECT_DIR$/app/lang/en/validation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/view.php" afterPath="$PROJECT_DIR$/app/config/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/workbench.php" afterPath="$PROJECT_DIR$/app/config/workbench.php" />
+    </list>
+    <ignored path="Forret.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <ignored mask=".env*" />
+    <ignored path=".env.development.php" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Forret" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="workbench.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/workbench.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/services.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1676" max-vertical-offset="2340">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/compile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/auth.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="722" max-vertical-offset="1386">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/packages/barryvdh/laravel-debugbar/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2072" max-vertical-offset="2736">
+              <caret line="15" column="41" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/packages/bugsnag/bugsnag-laravel/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="234">
+              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/packages/dingo/api/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5709516" vertical-offset="252" max-vertical-offset="2790">
+              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitkeep" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/.gitkeep">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/app/controllers/Api/UsersController.php" />
+        <option value="$PROJECT_DIR$/app/config/packages/barryvdh/laravel-debugbar/config.php" />
+        <option value="$PROJECT_DIR$/.env.development.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/controllers/Api/SessionsController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Frontend/SessionsController.php" />
+        <option value="$PROJECT_DIR$/app/views/frontend/raelina/components/sections/intro.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/frontend/raelina/pages/home.blade.php" />
+        <option value="$PROJECT_DIR$/app/routes/frontend_routes.php" />
+        <option value="$PROJECT_DIR$/app/models/User.php" />
+        <option value="$PROJECT_DIR$/app/Forret/Interfaces/UserInterface.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Frontend/DashboardController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Frontend/UsersController.php" />
+        <option value="$PROJECT_DIR$/app/views/frontend/raelina/components/sections/profile.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/frontend/raelina/pages/profile.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/386/components/pageComponents/head.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/386/components/pageComponents/pageFooterScripts.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/386/components/pageComponents/navbar.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/386/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/TestUsersSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/UsersTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/views/frontend/default/components/global_scripts.blade.php" />
+        <option value="$PROJECT_DIR$/app/Forret/Repositories/UserRepository.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/adminlte/pages/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/CONTRIBUTING.md" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/modules/Admin/routes.php" />
+        <option value="$PROJECT_DIR$/app/modules/Api/routes.php" />
+        <option value="$PROJECT_DIR$/app/modules/Frontend/routes.php" />
+        <option value="$PROJECT_DIR$/app/modules/Admin/filters.php" />
+        <option value="$PROJECT_DIR$/app/modules/Api/filters.php" />
+        <option value="$PROJECT_DIR$/app/modules/Frontend/filters.php" />
+        <option value="$PROJECT_DIR$/app/start/global.php" />
+        <option value="$PROJECT_DIR$/app/modules/Frontend/views/default/components/global_scripts.blade.php" />
+        <option value="$PROJECT_DIR$/app/modules/Frontend/views/default/components/head.blade.php" />
+        <option value="$PROJECT_DIR$/app/modules/Admin/controllers/BaseController.php" />
+        <option value="$PROJECT_DIR$/app/modules/Api/Controllers/BaseController.php" />
+        <option value="$PROJECT_DIR$/app/modules/Api/Controllers/SessionsController.php" />
+        <option value="$PROJECT_DIR$/app/modules/Api/Controllers/UsersController.php" />
+        <option value="$PROJECT_DIR$/app/modules/Admin/Controllers/UsersController.php" />
+        <option value="$PROJECT_DIR$/app/modules/Admin/Controllers/SessionsController.php" />
+        <option value="$PROJECT_DIR$/app/modules/Admin/Controllers/DashboardController.php" />
+        <option value="$PROJECT_DIR$/app/modules/Frontend/Controllers/BaseController.php" />
+        <option value="$PROJECT_DIR$/app/modules/Frontend/Controllers/DashboardController.php" />
+        <option value="$PROJECT_DIR$/app/modules/Frontend/Controllers/SessionsController.php" />
+        <option value="$PROJECT_DIR$/app/modules/Frontend/Controllers/UsersController.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/config/app.php" />
+        <option value="$PROJECT_DIR$/app/config/packages/bugsnag/bugsnag-laravel/config.php" />
+        <option value="$PROJECT_DIR$/app/config/packages/dingo/api/config.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ColorIdeProjectViewPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ColorIdeProjectViewPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dingo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="barryvdh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="composer.json&#9;FILE&#9;file://C:/sites/AppIt/Forret/composer.json&#10;generate&#9;ACTION&#9;Generate&#10;live template&#9;null&#9;null" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\sites\AppIt\Forret\app\config\packages" />
+      <recent name="C:\sites\AppIt\Forret\app\modules\Frontend\Controllers" />
+      <recent name="C:\sites\AppIt\Forret\app\modules\Api\Controllers" />
+      <recent name="C:\sites\AppIt\Forret\app\modules\Admin\controllers" />
+      <recent name="C:\sites\AppIt\Forret\public\assets\defaultFrontend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\sites\AppIt\Forret\public\assets\defaultFrontend\img" />
+      <recent name="C:\sites\AppIt\Forret\app\views\frontend\raelina\components" />
+      <recent name="C:\sites\AppIt\Forret\app\routes" />
+      <recent name="C:\sites\AppIt\Forret\app\views\frontend\raelina" />
+      <recent name="C:\sites\AppIt\Forret\app\views\frontend\themeName" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="c1f636c7-0af8-47c2-97d3-b7487d269ade" server_name="Forret">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="296e92f1-e285-4ec2-8eff-7c539bf47c9f" name="Default" comment="" />
+      <created>1403034257176</created>
+      <option name="number" value="Default" />
+      <updated>1403034257176</updated>
+    </task>
+    <task id="LOCAL-00001" summary="updated ignore file">
+      <created>1403034758506</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1403034758506</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updated ignore file">
+      <created>1403036110676</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1403036110676</updated>
+    </task>
+    <task id="LOCAL-00003" summary="testupdate">
+      <created>1403301205150</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1403301205150</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updating some tests as well as readme">
+      <created>1403503875152</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1403503875152</updated>
+    </task>
+    <task id="LOCAL-00005" summary="updating views to call assets with correct blade syntax instead of static html. fixes #1">
+      <created>1403504523787</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1403504523787</updated>
+    </task>
+    <task id="LOCAL-00006" summary="links have been updated to the new domain. Waiting on dns propigation now. fixes #2">
+      <created>1403504646932</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1403504646932</updated>
+    </task>
+    <task id="LOCAL-00007" summary="small adjustment for script/style tags">
+      <created>1403506476717</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1403506476717</updated>
+    </task>
+    <task id="LOCAL-00008" summary="javascript now loading via blade syntax on auth">
+      <created>1403506822300</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1403506822300</updated>
+    </task>
+    <task id="LOCAL-00009" summary="errors reported via debugbar fixed">
+      <created>1403507281047</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1403507281047</updated>
+    </task>
+    <task id="LOCAL-00010" summary="updated gitignore">
+      <created>1403549797077</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1403549797077</updated>
+    </task>
+    <task id="LOCAL-00011" summary="updates to config variables to work with forge">
+      <created>1403550425328</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1403550425328</updated>
+    </task>
+    <task id="LOCAL-00012" summary="updating dump file">
+      <created>1403555117474</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1403555117474</updated>
+    </task>
+    <task id="LOCAL-00013" summary="starting framework for Forret user frontend">
+      <created>1403637194958</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1403637194958</updated>
+    </task>
+    <task id="LOCAL-00014" summary="updates to gitignore for .env files">
+      <created>1403638203553</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1403638203553</updated>
+    </task>
+    <task id="LOCAL-00015" summary="necessary adjustments to make frontend work">
+      <created>1403642531236</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1403642531236</updated>
+    </task>
+    <task id="LOCAL-00016" summary="blank pages made for needed pages">
+      <created>1403644564569</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1403644564569</updated>
+    </task>
+    <task id="LOCAL-00017" summary="changes to allow for user frontend/homepage type stuff">
+      <created>1403908354425</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1403908354425</updated>
+    </task>
+    <task id="LOCAL-00018" summary="adjustments so root goes to homepage">
+      <created>1403913616825</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1403913616825</updated>
+    </task>
+    <task id="LOCAL-00019" summary="starting code for user frontend login">
+      <created>1404017604099</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1404017604099</updated>
+    </task>
+    <task id="LOCAL-00020" summary="cleaned up routes file">
+      <created>1404083497990</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1404083497990</updated>
+    </task>
+    <task id="LOCAL-00021" summary="more route cleanign">
+      <created>1404083562879</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1404083562879</updated>
+    </task>
+    <task id="LOCAL-00022" summary="homepage broken apart">
+      <created>1404084173471</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1404084173471</updated>
+    </task>
+    <task id="LOCAL-00023" summary="navbar links dynamic based on Sentry::check()">
+      <created>1404084494763</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1404084494763</updated>
+    </task>
+    <task id="LOCAL-00024" summary="login page mostly finished">
+      <created>1404085403880</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1404085403880</updated>
+    </task>
+    <task id="LOCAL-00025" summary="homepage login and profile">
+      <created>1404092869156</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1404092869156</updated>
+    </task>
+    <task id="LOCAL-00026" summary="broke apart the frontend and api. &#10;Handled exceptions.&#10;Updated laravel to 4.2&#10;Removed Respect\Validation&#10;Added in model validation and form validation">
+      <created>1404123390570</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1404123390570</updated>
+    </task>
+    <task id="LOCAL-00027" summary="updates to config settings and small formatting">
+      <created>1404124332007</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1404124332007</updated>
+    </task>
+    <task id="LOCAL-00028" summary="updating db file to work with new model validations">
+      <created>1404126105156</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1404126105156</updated>
+    </task>
+    <task id="LOCAL-00029" summary="composer.json updates">
+      <created>1404139104701</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1404139104701</updated>
+    </task>
+    <task id="LOCAL-00030" summary="make debug mode not code dependant">
+      <created>1404141207431</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1404141207431</updated>
+    </task>
+    <task id="LOCAL-00031" summary="composer.json updates">
+      <created>1404141998497</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1404141998497</updated>
+    </task>
+    <task id="LOCAL-00032" summary="composer.json updates">
+      <created>1404158035032</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1404158035032</updated>
+    </task>
+    <task id="LOCAL-00033" summary="dashboard update">
+      <created>1404185704725</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1404185704725</updated>
+    </task>
+    <task id="LOCAL-00034" summary="putting into place the views for 386">
+      <created>1404300085988</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1404300085988</updated>
+    </task>
+    <task id="LOCAL-00035" summary="adjustments to db seeds">
+      <created>1404319552599</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1404319552599</updated>
+    </task>
+    <task id="LOCAL-00036" summary="frontend theme renamed">
+      <created>1404841304487</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1404841304487</updated>
+    </task>
+    <task id="LOCAL-00037" summary="frontend theme renamed">
+      <created>1404842185573</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1404842185573</updated>
+    </task>
+    <task id="LOCAL-00038" summary="adjusting admin theme, and updates to readme">
+      <created>1406701639333</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1406701639333</updated>
+    </task>
+    <task id="LOCAL-00039" summary="marking demo as down">
+      <created>1407783071159</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1407783071159</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2603613" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40816328" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41551542" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TaskBrowser" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Floobits Chat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32943678" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Pomodoro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3219448" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="starting framework for Forret user frontend" />
+    <MESSAGE value="updates to gitignore for .env files" />
+    <MESSAGE value="necessary adjustments to make frontend work" />
+    <MESSAGE value="blank pages made for needed pages" />
+    <MESSAGE value="changes to allow for user frontend/homepage type stuff" />
+    <MESSAGE value="adjustments so root goes to homepage" />
+    <MESSAGE value="starting code for user frontend login" />
+    <MESSAGE value="cleaned up routes file" />
+    <MESSAGE value="more route cleanign" />
+    <MESSAGE value="homepage broken apart" />
+    <MESSAGE value="navbar links dynamic based on Sentry::check()" />
+    <MESSAGE value="login page mostly finished" />
+    <MESSAGE value="homepage login and profile" />
+    <MESSAGE value="broke apart the frontend and api. &#10;Handled exceptions.&#10;Updated laravel to 4.2&#10;Removed Respect\Validation&#10;Added in model validation and form validation" />
+    <MESSAGE value="updates to config settings and small formatting" />
+    <MESSAGE value="updating db file to work with new model validations" />
+    <MESSAGE value="make debug mode not code dependant" />
+    <MESSAGE value="composer.json updates" />
+    <MESSAGE value="dashboard update" />
+    <MESSAGE value="putting into place the views for 386" />
+    <MESSAGE value="adjustments to db seeds" />
+    <MESSAGE value="frontend theme renamed" />
+    <MESSAGE value="adjusting admin theme, and updates to readme" />
+    <MESSAGE value="marking demo as down" />
+    <MESSAGE value="first commit for new branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit for new branch" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/config/packages/dingo/api/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2790">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/.gitkeep">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="864" max-vertical-offset="2160">
+          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/paths.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1449">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/start.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="724" max-vertical-offset="1633">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1863">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26256078" vertical-offset="468" max-vertical-offset="1710">
+          <caret line="25" column="145" selection-start-line="25" selection-start-column="145" selection-end-line="25" selection-end-column="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_04_28_152153_create_sessions_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Api/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Frontend/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3529412" vertical-offset="0" max-vertical-offset="663">
+          <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Admin/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29864255" vertical-offset="0" max-vertical-offset="663">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Frontend/filters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.040724" vertical-offset="0" max-vertical-offset="2124">
+          <caret line="120" column="3" selection-start-line="120" selection-start-column="3" selection-end-line="120" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Api/filters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5701358" vertical-offset="0" max-vertical-offset="663">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Admin/filters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.108597286" vertical-offset="0" max-vertical-offset="663">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Admin/views/adminlte/pages/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/adminlte/js/plugins/flot/excanvas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="24966">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/default/less/grayscale.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6732">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/start/global.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32579187" vertical-offset="108" max-vertical-offset="1764">
+          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32579187" vertical-offset="0" max-vertical-offset="663">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Frontend/views/default/components/global_scripts.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Frontend/views/default/components/head.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Frontend/views/default/pages/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Frontend/views/default/pages/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="599">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Frontend/views/default/pages/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="599">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Frontend/views/default/pages/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="599">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Frontend/views/default/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="599">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Api/Controllers/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2268">
+          <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Api/Controllers/SessionsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+          <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Api/Controllers/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216">
+          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Admin/Controllers/DashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="599">
+          <caret line="0" column="35" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Admin/Controllers/SessionsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.003338898" vertical-offset="2" max-vertical-offset="864">
+          <caret line="0" column="35" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Admin/Controllers/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="599">
+          <caret line="0" column="34" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Admin/Controllers/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.006677796" vertical-offset="4" max-vertical-offset="1710">
+          <caret line="0" column="35" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Frontend/Controllers/DashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
+          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Frontend/Controllers/SessionsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Frontend/Controllers/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="599">
+          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/Frontend/Controllers/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
+          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1944" max-vertical-offset="3798">
+          <caret line="126" column="44" selection-start-line="126" selection-start-column="44" selection-end-line="126" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1062">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/workbench.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/.gitkeep">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="664">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2340">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/compile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="664">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="722" max-vertical-offset="1386">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/packages/barryvdh/laravel-debugbar/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2072" max-vertical-offset="2736">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/packages/bugsnag/bugsnag-laravel/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/packages/dingo/api/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5709516" vertical-offset="252" max-vertical-offset="2790">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

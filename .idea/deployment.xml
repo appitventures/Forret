@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="FORGE - AWS">
+    <serverData>
+      <paths name="FORGE - AWS">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/forge/forret-staging.appitinternal.com" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/vendor" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="FORGE - Database">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/forge/forret-preprod.appitinternal.com" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/vendor" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="PREPROD - Forret">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/forge/forret-preprod.appitinternal.com" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/vendor" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="PROD - Forret">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/opt/bitnami/apps/prod/forret" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/vendor" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
+

@@ -1,12 +1,8 @@
 {
-    "name": "AppItVentures/Forret",
-    "description": "L4 Starter kit used produced by Forret",
-    "authors": [
-        {
-            "name": "Michael Hopkins",
-            "email": "michael@appitventures.com"
-        }
-    ],
+	"name": "laravel/laravel",
+	"description": "The Laravel Framework.",
+	"keywords": ["framework", "laravel"],
+	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
         "way/generators": "2.*",
@@ -24,17 +20,15 @@
 	"autoload": {
 		"classmap": [
 			"app/commands",
-			"app/controllers",
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds"
 		],
-		"psr-0": {
-            "Forret": "app/",
-            "Controllers\\Api": "app/",
-            "Controllers\\Admin": "app/",
-            "Controllers\\Frontend": "app/"
-		}
+        "psr-0": {
+            "Api\\Controllers": "app/modules/",
+            "Admin\\Controllers": "app/modules/",
+            "Frontend\\Controllers": "app/modules/"
+        }
 	},
     "scripts": {
         "post-install-cmd": [
@@ -52,8 +46,8 @@
             "php artisan key:generate"
         ]
     },
-    "config": {
-        "preferred-install": "dist"
-    },
-    "minimum-stability": "dev"
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "stable"
 }
