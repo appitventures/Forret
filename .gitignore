@@ -4,4 +4,4 @@ composer.lock
 .env.*.php
 .env.php
 app/config/development/*
-/.idea
+.idea
