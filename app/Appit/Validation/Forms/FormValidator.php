@@ -1,6 +1,6 @@
 <?php namespace Appit\Validation\Forms;
 
-use Forret\Exceptions\ValidationException;
+use Appit\Exceptions\ValidationException;
 use Illuminate\Validation\Factory as Validator;
 use Illuminate\Validation\Validator as ValidatorInstance;
 

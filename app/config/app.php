@@ -127,7 +127,8 @@ return array(
         'Barryvdh\Debugbar\ServiceProvider',
         'Dingo\Api\ApiServiceProvider',
         'Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider',
-        'Cartalyst\Sentry\SentryServiceProvider'
+        'Cartalyst\Sentry\SentryServiceProvider',
+        'Appit\Providers\BackendServiceProvider'
 
 	),
 

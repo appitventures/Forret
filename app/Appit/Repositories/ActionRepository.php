@@ -1,6 +1,6 @@
 <?php namespace Appit\Repositories;
 
-use Forret\Interfaces\ActionInterface;
+use Appit\Interfaces\ActionInterface;
 use Action;
 
 class ActionRepository implements ActionInterface {

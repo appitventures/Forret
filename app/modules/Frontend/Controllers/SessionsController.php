@@ -2,8 +2,8 @@
 
 use API;
 use Cartalyst\Sentry\Users\UserNotFoundException;
-use Forret\Exceptions\ValidationException;
-use Forret\Validation\Forms\Login;
+use Appit\Exceptions\ValidationException;
+use Appit\Validation\Forms\Login;
 use \Input;
 use Redirect;
 use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;

@@ -3,7 +3,7 @@ use Cartalyst\Sentry\Users\UserExistsException;
 use Dingo\Api\Auth\Shield;
 use Dingo\Api\Dispatcher;
 use Dingo\Api\Exception\StoreResourceFailedException;
-use Forret\Exceptions\ValidationException;
+use Appit\Exceptions\ValidationException;
 use Respect\Validation\Exceptions\AbstractNestedException;
 use \View;
 use Input;

@@ -8,6 +8,6 @@ class BackendServiceProvider extends ServiceProvider {
      * Register the binding
      */
     public function register() {
-        $this->app->bind('Forret\Interfaces\UserInterface', 'Forret\Repositories\UserRepository');
+        $this->app->bind('Appit\Interfaces\UserInterface', 'Appit\Repositories\UserRepository');
     }
 } 

@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'admin','namespace'=>'Controllers\Admin'], function () {
+Route::group(['prefix' => 'admin','namespace'=>'Admin\Controllers'], function () {
     Route::get('login',['as'=>'adminlogin','uses'=>'SessionsController@create']);
     Route::post('login',['uses'=>'SessionsController@store']);
 

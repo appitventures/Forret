@@ -4,7 +4,7 @@ use Cartalyst\Sentry\Users\UserNotFoundException;
 use Sentry;
 use Dingo\Api\Exception\ResourceException;
 use Input;
-use Forret\Exceptions\ValidationException;
+use Appit\Exceptions\ValidationException;
 use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 
 class SessionsController extends BaseController {

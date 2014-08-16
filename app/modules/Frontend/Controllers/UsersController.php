@@ -1,6 +1,6 @@
 <?php  namespace Frontend\Controllers;
 
-use Forret\Interfaces\UserInterface;
+use Appit\Interfaces\UserInterface;
 use View;
 use Sentry;
 

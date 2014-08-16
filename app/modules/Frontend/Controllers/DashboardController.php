@@ -1,11 +1,11 @@
 <?php  namespace Frontend\Controllers;
 
-use Forret\Interfaces\UserInterface;
+use Appit\Interfaces\UserInterface;
 use Sentry;
 use \View;
 
 class DashboardController extends BaseController {
-    /** @var \Forret\Repositories\UserRepository  */
+    /** @var \Appit\Repositories\UserRepository  */
     protected $user;
     public function __construct(UserInterface $user){
         $this->user = $user;

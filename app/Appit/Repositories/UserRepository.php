@@ -1,7 +1,7 @@
 <?php  namespace Appit\Repositories;
 use Carbon\Carbon;
-use Forret\Interfaces\UserInterface;
-use Forret\Mailers\UserMailer;
+use Appit\Interfaces\UserInterface;
+use Appit\Mailers\UserMailer;
 use Sentry;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use User;

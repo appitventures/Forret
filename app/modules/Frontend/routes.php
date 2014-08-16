@@ -1,5 +1,5 @@
 <?php
-Route::group(['namespace'=>'Controllers\Frontend'],function(){
+Route::group(['namespace'=>'Frontend\Controllers'],function(){
     Route::post('queue/post', function () {return Queue::marshal();});
     Route::get('/',['as'=>'home','uses'=>'DashboardController@index']);
 

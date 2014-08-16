@@ -2,7 +2,7 @@
 
 use Cartalyst\Sentry\Users\UserExistsException;
 use Dingo\Api\Exception\StoreResourceFailedException;
-use Forret\Interfaces\UserInterface;
+use Appit\Interfaces\UserInterface;
 use Input;
 use Redirect;
 use View;
@@ -11,7 +11,7 @@ use Sentry;
 
 class UsersController extends BaseController {
 
-    /** @var \Forret\Repositories\UserRepository  */
+    /** @var \Appit\Repositories\UserRepository  */
     protected $user;
     public function __construct(UserInterface $user){
         $this->user = $user;

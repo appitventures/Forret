@@ -1,6 +1,6 @@
 <?php
 
-Route::api(['version'=>'v1','prefix'=>'api','namespace'=>'Controllers\Api'],function() {
+Route::api(['version'=>'v1','prefix'=>'api','namespace'=>'Api\Controllers'],function() {
     Route::get('/', 'SessionsController@index');
     Route::post('login', 'SessionsController@store');
     Route::get('logout', 'SessionsController@destroy');
