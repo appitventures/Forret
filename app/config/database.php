@@ -45,20 +45,44 @@ return array(
 	*/
 
 	'connections' => array(
-        'mysql' => array(
-            'driver'    => 'mysql',
-            'host'      => $_ENV['DB_HOSTNAME'],
-            'database'  => $_ENV['DB_DATABASE'],
-            'username'  => $_ENV['DB_USERNAME'],
-            'password'  => $_ENV['DB_PASSWORD'],
-            'charset'   => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
-            'options'   => array(
-                // Here is the time zone setting
-                \PDO::MYSQL_ATTR_INIT_COMMAND => 'SET time_zone = \'+00:00\''
-            )
-        ),
+
+		'sqlite' => array(
+			'driver'   => 'sqlite',
+			'database' => __DIR__.'/../database/production.sqlite',
+			'prefix'   => '',
+		),
+
+		'mysql' => array(
+			'driver'    => 'mysql',
+			'host'      => 'localhost',
+			'database'  => 'forge',
+			'username'  => 'forge',
+			'password'  => '',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),
+
+		'pgsql' => array(
+			'driver'   => 'pgsql',
+			'host'     => 'localhost',
+			'database' => 'forge',
+			'username' => 'forge',
+			'password' => '',
+			'charset'  => 'utf8',
+			'prefix'   => '',
+			'schema'   => 'public',
+		),
+
+		'sqlsrv' => array(
+			'driver'   => 'sqlsrv',
+			'host'     => 'localhost',
+			'database' => 'database',
+			'username' => 'root',
+			'password' => '',
+			'prefix'   => '',
+		),
+
 	),
 
 	/*
@@ -68,7 +92,7 @@ return array(
 	|
 	| This table keeps track of all the migrations that have already run for
 	| your application. Using this information, we can determine which of
-	| the migrations on disk have not actually be run in the databases.
+	| the migrations on disk haven't actually been run in the database.
 	|
 	*/
 
@@ -87,7 +111,7 @@ return array(
 
 	'redis' => array(
 
-		'cluster' => true,
+		'cluster' => false,
 
 		'default' => array(
 			'host'     => '127.0.0.1',

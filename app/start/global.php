@@ -1,15 +1,22 @@
 <?php
+
+
 /*
 |--------------------------------------------------------------------------
-| Add setting to allow for dynamic theme use for Frontend and Admin
+| Register namespaces for views
 |--------------------------------------------------------------------------
+|
+| Setting View namespaces based on theme name for the admin
+| portal and user frontend allows for very easily using
+| various themes, as well as swapping out new themes.
+|
 */
 
 
 $adminTheme = 'adminlte';
-View::addNamespace('Admin',__DIR__.'/../views/admin/'.$adminTheme);
+View::addNamespace('Admin',__DIR__.'/../modules/Admin/views/'.$adminTheme);
 $frontendTheme = 'default';
-View::addNamespace('Frontend',__DIR__.'/../views/frontend/'.$frontendTheme);
+View::addNamespace('Frontend',__DIR__.'/../modules/Frontend/views/'.$frontendTheme);
 
 
 /*
@@ -22,7 +29,6 @@ View::addNamespace('Frontend',__DIR__.'/../views/frontend/'.$frontendTheme);
 | your classes in the "global" namespace without Composer updating.
 |
 */
-
 
 ClassLoader::addDirectories(array(
 
@@ -59,11 +65,26 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 |
 */
 
+App::error(function(Exception $exception, $code)
+{
+	Log::error($exception);
+});
 
-require __DIR__.'/../globalExceptions.php';
+/*
+|--------------------------------------------------------------------------
+| Maintenance Mode Handler
+|--------------------------------------------------------------------------
+|
+| The "down" Artisan command gives you the ability to put an application
+| into maintenance mode. Here, you will define what is displayed back
+| to the user if maintenance mode is in effect for the application.
+|
+*/
 
-
-
+App::down(function()
+{
+	return Response::make("Be right back!", 503);
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -75,10 +96,6 @@ require __DIR__.'/../globalExceptions.php';
 | definitions instead of putting them all in the main routes file.
 |
 */
-require __DIR__.'/../filters/adminFilters.php';
-require __DIR__.'/../filters/apiFilters.php';
-require __DIR__.'/../filters/frontendFilters.php';
-
-// Require the Observables file.
-require __DIR__.'/../listeners.php';
-
+require __DIR__.'/../modules/Admin/filters.php';
+require __DIR__.'/../modules/Api/filters.php';
+require __DIR__.'/../modules/Frontend/filters.php';
