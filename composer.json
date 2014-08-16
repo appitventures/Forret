@@ -25,6 +25,7 @@
 			"app/database/seeds"
 		],
         "psr-0": {
+            "Appit":"app/",
             "Api\\Controllers": "app/modules/",
             "Admin\\Controllers": "app/modules/",
             "Frontend\\Controllers": "app/modules/"
