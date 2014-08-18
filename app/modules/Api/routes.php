@@ -1,14 +1,13 @@
 <?php
-
-Route::api(['version'=>'v1','prefix'=>'api','namespace'=>'Api\Controllers'],function() {
-    Route::get('/', 'SessionsController@index');
-    Route::post('login', 'SessionsController@store');
-    Route::get('logout', 'SessionsController@destroy');
-    Route::post('/forgotPassword', 'UsersController@postForgotPassword');
+    Route::group(['before' => 'oauth'], function () {
+        Route::api(['version' => 'v1', 'prefix' => 'api', 'namespace' => 'Api\Controllers'], function () {
+            Route::get('/', 'SessionsController@index');
+            Route::post('login', 'SessionsController@store');
+            Route::get('logout', 'SessionsController@destroy');
+            Route::post('/forgotPassword', 'UsersController@postForgotPassword');
     Route::get('/resetPassword', 'UsersController@getResetPassword');
     Route::post('/resetPassword', 'UsersController@postResetPassword');
     Route::get('/activate', 'UsersController@getActivate');
-
 
     Route::get("users/search",'UsersController@search');
     Route::resource('users', 'UsersController');
@@ -17,8 +16,6 @@ Route::api(['version'=>'v1','prefix'=>'api','namespace'=>'Api\Controllers'],func
     Route::get('/logout',function(){
         Sentry::logout();
     });
-
-
 
     Route::group(['prefix' => 'auth'], function(){
         Route::get('signin', ['as' => 'signin', 'uses' => 'AuthController@getSignin']);
@@ -32,3 +29,8 @@ Route::api(['version'=>'v1','prefix'=>'api','namespace'=>'Api\Controllers'],func
     });
 
 });
+    });
+
+    Route::post('oauth/access_token', function () {
+        return AuthorizationServer::performAccessTokenFlow();
+    });
