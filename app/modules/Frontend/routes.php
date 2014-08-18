@@ -12,5 +12,12 @@ Route::group(['namespace'=>'Frontend\Controllers'],function(){
         return Redirect::route('home')->with('message','Successfully Logged Out!');
     }]);
 
+    Route::post('oauth/access_token', function () {
+        return AuthorizationServer::performAccessTokenFlow();
+    });
+
+    Route::get('/oauth/authorize', array('before' => 'check-authorization-params|auth', ['as' => 'oauth.create', 'uses' => 'SessionsController@getAuthToken']));
+
+
     Route::resource('users','UsersController',['only'=>['show']]);
 });
