@@ -9,8 +9,6 @@ use Redirect;
 use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 use \View;
 use Watson\Validating\ValidationException as ValidWatson;
-use Plugins\OAuth2\OAuth;
-use AuthorizationServer;
 
 class SessionsController extends BaseController {
     /**
@@ -18,10 +16,8 @@ class SessionsController extends BaseController {
      */
     private $loginForm;
 
-    public function __construct(Login $loginForm, OAuth $OAuth)
-    {
+    public function __construct(Login $loginForm){
 
-        $this->OAuth = $OAuth;
         $this->loginForm = $loginForm;
     }
 
@@ -50,35 +46,5 @@ class SessionsController extends BaseController {
         catch(ValidWatson $e){
             return Redirect::back()->withInput()->withErrors($e->getErrors());
         }
-    }
-
-
-    public function getAuthToken()
-    {
-
-        $view['params'] = $this->OAuth->getAuthToken();
-        return View::make('Frontend::oauth.index', $view);
-    }
-
-    public function postAuthToken()
-    {
-        $authData = $this->OAuth->postAuthToken();
-
-        switch ($authData['approve']) {
-
-            case 'true';
-                return Redirect::to(AuthorizationServer::makeRedirectWithCode($authData['code'], $authData['params']));
-                break;
-
-            case 'false';
-                return Redirect::to(AuthorizationServer::makeRedirectWithError($authData['params']));
-                break;
-
-            default;
-                return Redirect::back()->with('authError', 'something went terribly wrong...aborting!');
-                break;
-        }
-
-
     }
 }
