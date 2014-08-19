@@ -27,9 +27,10 @@
         ],
         "psr-0": {
             "Appit": "app/",
-            "Api\\Controllers": "app/modules/",
-            "Admin\\Controllers": "app/modules/",
-            "Frontend\\Controllers": "app/modules/"
+            "Api\\": "app/modules/",
+            "Admin\\": "app/modules/",
+            "Frontend\\": "app/modules/",
+            "Plugins\\":"app/modules"
         }
     },
     "scripts": {

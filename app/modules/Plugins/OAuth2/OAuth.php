@@ -22,6 +22,7 @@ class OAuth
 
     /**
      * @param mixed $statusCode
+     * @return $this
      */
     public function setStatusCode($statusCode)
     {
