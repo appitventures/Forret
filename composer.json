@@ -1,10 +1,10 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
-    "require": {
-        "laravel/framework": "4.2.*",
+	"name": "laravel/laravel",
+	"description": "The Laravel Framework.",
+	"keywords": ["framework", "laravel"],
+	"license": "MIT",
+	"require": {
+		"laravel/framework": "4.2.*",
         "way/generators": "2.*",
         "iron-io/iron_mq": "1.*",
         "barryvdh/laravel-vendor-cleanup": "1.*",
@@ -15,23 +15,22 @@
         "bugsnag/bugsnag-laravel": "1.*",
         "esensi/model": "0.3.*",
         "cartalyst/sentry": "2.*",
-        "codeception/codeception": "2.*",
-        "lucadegasperi/oauth2-server-laravel": "1.0.x"
-    },
-    "autoload": {
-        "classmap": [
-            "app/commands",
-            "app/models",
-            "app/database/migrations",
-            "app/database/seeds"
-        ],
+        "codeception/codeception": "2.*"
+	},
+	"autoload": {
+		"classmap": [
+			"app/commands",
+			"app/models",
+			"app/database/migrations",
+			"app/database/seeds"
+		],
         "psr-0": {
-            "Appit": "app/",
+            "Appit":"app/",
             "Api\\Controllers": "app/modules/",
             "Admin\\Controllers": "app/modules/",
             "Frontend\\Controllers": "app/modules/"
         }
-    },
+	},
     "scripts": {
         "post-install-cmd": [
             "php artisan clear-compiled",
@@ -48,8 +47,8 @@
             "php artisan key:generate"
         ]
     },
-    "config": {
-        "preferred-install": "dist"
-    },
-    "minimum-stability": "stable"
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "stable"
 }
