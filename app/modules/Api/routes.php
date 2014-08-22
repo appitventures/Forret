@@ -1,7 +1,54 @@
 <?php
 
 Route::api(['version'=>'v1','prefix'=>'api','namespace'=>'Api\Controllers'],function() {
-    Route::get('/', 'SessionsController@index');
+
+// OAuth2 Server
+
+    Route::get('oauth/authorize', [
+        'before' => 'check-authorization-params|auth',
+        function () {
+            $params = Session::get('authorize-params');
+            $params['user_id'] = Auth::user()->id;
+            return View::make('authorization-form', ['params' => $params]);
+    }]);
+
+    Route::post('oauth/authorize', array('before' => 'check-authorization-params|auth|csrf', function()
+    {
+        // get the data from the check-authorization-params filter
+        $params = Session::get('authorize-params');
+
+        // get the user id
+        $params['user_id'] = Auth::user()->id;
+
+        // check if the user approved or denied the authorization request
+        if (Input::get('approve') !== null) {
+
+            $code = AuthorizationServer::newAuthorizeRequest('user', $params['user_id'], $params);
+
+            Session::forget('authorize-params');
+
+            return Redirect::to(AuthorizationServer::makeRedirectWithCode($code, $params));
+        }
+
+        if (Input::get('deny') !== null) {
+
+            Session::forget('authorize-params');
+
+            return Redirect::to(AuthorizationServer::makeRedirectWithError($params));
+        }
+    }));
+
+    Route::post('oauth/access_token', function()
+    {
+        return AuthorizationServer::performAccessTokenFlow();
+    });
+
+    Route::get('tester', function ()
+    {
+        return API::user();
+    });
+
+    Route::get('/', 'SessionsController@index');    // api.auth
     Route::post('login', 'SessionsController@store');
     Route::get('logout', 'SessionsController@destroy');
     Route::post('/forgotPassword', 'UsersController@postForgotPassword');
@@ -11,9 +58,11 @@ Route::api(['version'=>'v1','prefix'=>'api','namespace'=>'Api\Controllers'],func
 
 
     Route::get("users/search",'UsersController@search');
-    Route::resource('users', 'UsersController');
     Route::get("users/{users}/undestroy",'UsersController@undestroy');
+    Route::resource('users', 'UsersController');
+
     Route::resource('sessions','SessionsController');
+
     Route::get('/logout',function(){
         Sentry::logout();
     });

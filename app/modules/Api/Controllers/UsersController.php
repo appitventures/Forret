@@ -9,21 +9,32 @@ use View;
 use Mail;
 use Sentry;
 
-class UsersController extends BaseController {
+class UsersController extends BaseController
+{
 
     /** @var \Appit\Repositories\UserRepository  */
     protected $user;
-    public function __construct(UserInterface $user){
+
+    public function __construct(UserInterface $user)
+    {
         $this->user = $user;
 
-        $this->beforeFilter('api.auth',['only'=>['show','update']]);
-        $this->beforeFilter('api.isAdmin',['only'=>['destroy','search']]);
+/*        $this->scope('admin');
+        $this->scope('admin', ['destroy', 'search', 'index']);*/
+/*        $this->beforeFilter('api.auth',['only'=>['show','update']]);
+        $this->beforeFilter('api.isAdmin',['only'=>['destroy','search']]);*/
+        $this->beforeFilter('oauth', ['only' => ['show', 'update']]);
+        $this->beforeFilter('oauth:admin', ['only' => ['destroy', 'search', 'index']]);
+
     }
-    public function index() {
+
+    public function index()
+    {
         return $this->user->recent25();
     }
 
-    public function store(){
+    public function store()
+    {
         try {
 
             return $this->user->createNew(Input::all());
@@ -32,29 +43,35 @@ class UsersController extends BaseController {
             throw new StoreResourceFailedException('user already exists');
         }
     }
-    public function show($id) {
+    public function show($id)
+    {
         return $this->user->findById($id);
     }
 
-    public function destroy($id){
+    public function destroy($id)
+    {
         return $this->user->deleteById($id);
     }
 
-    public function undestroy($id){
+    public function undestroy($id)
+    {
         return $this->user->undestroy($id);
     }
 
-    public function update($id){
+    public function update($id)
+    {
         $this->user->privatePage($id);
         return $this->user->updateExisting($id,Input::all());
     }
 
-    public function search(){
+    public function search()
+    {
 
         return $this->user->search(Input::all());
     }
 
-    public function getActivate(){
+    public function getActivate()
+    {
         $user = Sentry::findUserByCredentials(array(
             'email'=> $_REQUEST['useremail']
         ));
@@ -73,17 +90,15 @@ class UsersController extends BaseController {
         return Redirect::to('/')->with('message', 'Logout successful.');
     }
 
-    public function postForgotPassword(){
-        try
-        {
+    public function postForgotPassword()
+    {
+        try {
             // Find the user using the user email address
             $user = Sentry::findUserByLogin(Input::get('email'));
 
             // Get the password reset code
             $resetCode = $user->getResetPasswordCode();
-        }
-        catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
-        {
+        } catch (Cartalyst\Sentry\Users\UserNotFoundException $e) {
             echo 'User was not found.';
         }
 
@@ -95,7 +110,7 @@ class UsersController extends BaseController {
         );
 
         // use Mail::send function to send email passing the data and using the $user variable in the closure
-        Mail::send('passwordReset', $data, function($message) use ($user, $data)
+        Mail::send('passwordReset', $data, function ($message) use ($user, $data)
         {
             $message->from('admin@org.com', 'Organisation');
             $message->to($data['email'], $data['name'])->subject('Password Reset');
@@ -103,26 +118,26 @@ class UsersController extends BaseController {
         return Redirect::to('/')->with('message','Reset password code has been sent to your inbox!');
     }
 
-    public function getResetPassword(){
+    public function getResetPassword()
+    {
         // var_dump("expression");die;
         $user = Sentry::findUserByLogin(Input::get('useremail'));
-        if($user->reset_password_code == Input::get('reset_code')){
+        if($user->reset_password_code == Input::get('reset_code')) {
             return View::make('resetPassword',array('email'=> Input::get('useremail')));
         }
     }
 
-    public function postResetPassword(){
+    public function postResetPassword()
+    {
         // var_dump("expression");die;
-        try
-        {
+        try {
             $user = Sentry::findUserByLogin(Input::get('email'));
-        }
-        catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
-        {
+        } catch (Cartalyst\Sentry\Users\UserNotFoundException $e) {
             echo 'User was not found.';
         }
+
         $user->password = Input::get('password');
         $user->save();
         return Redirect::to('/')->with('message', 'Password succesfully changed.');
     }
-} 
+}

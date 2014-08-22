@@ -128,6 +128,7 @@ return array(
         'Dingo\Api\ApiServiceProvider',
         'Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider',
         'Cartalyst\Sentry\SentryServiceProvider',
+        'LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider',
         'Appit\Providers\BackendServiceProvider'
 
 	),
@@ -199,7 +200,9 @@ return array(
         'API'               => 'Dingo\Api\Facades\API',
         'Bugsnag'           => 'Bugsnag\BugsnagLaravel\BugsnagFacade',
         'Sentry' 		    => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
-        'Debugbar'          => 'Barryvdh\Debugbar\Facade'
+        'Debugbar'          => 'Barryvdh\Debugbar\Facade',
+        'AuthorizationServer'	=> 'LucaDegasperi\OAuth2Server\Facades\AuthorizationServerFacade',
+        'ResourceServer'	=> 'LucaDegasperi\OAuth2Server\Facades\ResourceServerFacade'
 
 	),
 

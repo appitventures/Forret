@@ -61,10 +61,27 @@ return [
 	|
 	*/
 
-	'auth' => [
+/*	'auth' => [
 		'basic' => function($app)
 		{
 			return new Dingo\Api\Auth\BasicProvider($app['auth']);
+		}
+	],*/
+
+	'auth'	=> [
+		'oauth2' => function ($app)
+		{
+			$provider = new Dingo\Api\Auth\LeagueOAuth2Provider($app['oauth2.resource-server']);
+
+			$provider->setUserCallback(function ($id) {
+				return User::find($id);
+			});
+
+			$provider->setClientCallback(function ($id) {
+				return OAuth\Client::find($id);
+			});
+
+			return $provider;
 		}
 	],
 
