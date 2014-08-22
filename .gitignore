@@ -5,3 +5,4 @@ composer.lock
 .env.php
 app/config/development/*
 .idea
+public/packages

@@ -60,9 +60,7 @@ Route::api(['version'=>'v1','prefix'=>'api','namespace'=>'Api\Controllers'],func
     Route::get("users/search",'UsersController@search');
     Route::get("users/{users}/undestroy",'UsersController@undestroy');
     Route::resource('users', 'UsersController');
-
     Route::resource('sessions','SessionsController');
-
     Route::get('/logout',function(){
         Sentry::logout();
     });

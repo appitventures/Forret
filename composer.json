@@ -1,10 +1,10 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
-    "require": {
-        "laravel/framework": "4.2.*",
+	"name": "laravel/laravel",
+	"description": "The Laravel Framework.",
+	"keywords": ["framework", "laravel"],
+	"license": "MIT",
+	"require": {
+		"laravel/framework": "4.2.*",
         "way/generators": "2.*",
         "iron-io/iron_mq": "1.*",
         "barryvdh/laravel-vendor-cleanup": "1.*",
@@ -26,12 +26,13 @@
             "app/database/seeds"
         ],
         "psr-0": {
-            "Appit":"app/",
-            "Api\\Controllers": "app/modules/",
-            "Admin\\Controllers": "app/modules/",
-            "Frontend\\Controllers": "app/modules/"
+            "Appit": "app/",
+            "Api\\": "app/modules/",
+            "Admin\\": "app/modules/",
+            "Frontend\\": "app/modules/",
+            "Plugins\\":"app/modules"
         }
-    },
+	},
     "scripts": {
         "post-install-cmd": [
             "php artisan clear-compiled",
@@ -48,8 +49,8 @@
             "php artisan key:generate"
         ]
     },
-    "config": {
-        "preferred-install": "dist"
-    },
-    "minimum-stability": "stable"
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "stable"
 }
