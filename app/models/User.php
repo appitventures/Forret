@@ -12,7 +12,7 @@ class User extends SentryUserModel implements UserInterface, RemindableInterface
     protected $hidden = [
         'remember_token', 'password', 'locked',
         'activation_code', 'persist_code', 'reset_password_code',
-        'activated', 'activated_at', 'permissions'
+        'activated_at', 'permissions'
     ];
 
 

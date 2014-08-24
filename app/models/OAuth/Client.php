@@ -6,11 +6,7 @@ class Client extends Eloquent
 {
     protected $table = 'oauth_clients';
 
-    protected $incrementing = false;
+    public $incrementing = false;
 
-    protected $fillable = [
-        'secret',
-        'name'
-    ];
-
+    protected $guarded = [];
 }

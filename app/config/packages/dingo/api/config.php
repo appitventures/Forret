@@ -160,7 +160,7 @@ return [
 	'formats' => [
 
 		'json' => new Dingo\Api\Http\ResponseFormat\JsonResponseFormat
-		
+
 	]
 
 ];

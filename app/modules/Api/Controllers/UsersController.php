@@ -18,14 +18,7 @@ class UsersController extends BaseController
     public function __construct(UserInterface $user)
     {
         $this->user = $user;
-
-/*        $this->scope('admin');
-        $this->scope('admin', ['destroy', 'search', 'index']);*/
-/*        $this->beforeFilter('api.auth',['only'=>['show','update']]);
-        $this->beforeFilter('api.isAdmin',['only'=>['destroy','search']]);*/
-        $this->beforeFilter('oauth', ['only' => ['show', 'update']]);
-        $this->beforeFilter('oauth:admin', ['only' => ['destroy', 'search', 'index']]);
-
+        $this->beforeFilter('hasGroup:Admins', ['only' => ['destroy', 'search']]);
     }
 
     public function index()
@@ -36,10 +29,9 @@ class UsersController extends BaseController
     public function store()
     {
         try {
-
             return $this->user->createNew(Input::all());
         }
-        catch(UserExistsException $e){
+        catch(UserExistsException $e) {
             throw new StoreResourceFailedException('user already exists');
         }
     }
@@ -72,16 +64,13 @@ class UsersController extends BaseController
 
     public function getActivate()
     {
-        $user = Sentry::findUserByCredentials(array(
-            'email'=> $_REQUEST['useremail']
-        ));
-        if($user->activation_code == $_REQUEST['activationcode']){
+        $user = Sentry::findUserByCredentials(['email' => $_REQUEST['useremail']]);
+        if($user->activation_code == $_REQUEST['activationcode']) {
             $user->activated = 1;
             $user->activated_at = new DateTime;
             $user->save();
             return Redirect::to('/')->with('message', 'Activation successful. You may login now.');
         }
-
     }
 
     public function getLogout()
@@ -103,10 +92,10 @@ class UsersController extends BaseController
         }
 
         $data = array(
-            'detail'=>'Account activation mail',
-            'name'  => $user['first_name']." ".$user['last_name'],
-            'reset_code'=>$resetCode,
-            'email'=>$user['email'],
+            'detail' =>'Account activation mail',
+            'name' => $user['first_name'] .' '. $user['last_name'],
+            'reset_code' => $resetCode,
+            'email' => $user['email'],
         );
 
         // use Mail::send function to send email passing the data and using the $user variable in the closure
@@ -123,7 +112,7 @@ class UsersController extends BaseController
         // var_dump("expression");die;
         $user = Sentry::findUserByLogin(Input::get('useremail'));
         if($user->reset_password_code == Input::get('reset_code')) {
-            return View::make('resetPassword',array('email'=> Input::get('useremail')));
+            return View::make('resetPassword', ['email' => Input::get('useremail')]);
         }
     }
 

@@ -71,18 +71,17 @@ return array(
             'access_token_ttl' => 604800,
             'callback'         => function ($username, $password) {
 
-                $credentials = array(
-                    'email' => $username,
-                    'password' => $password,
-                );
+                try {
+                    $user = Sentry::findUserByCredentials(['email' => $username]);
 
-                $valid = Auth::validate($credentials);
+                    if(!$user->checkPassword($password))
+                        return false;
 
-                if (!$valid) {
+                    return $user->id;
+
+                } catch (\Cartalyst\Sentry\Users\UserNotFoundException $e) {
                     return false;
                 }
-
-                return Auth::getProvider()->retrieveByCredentials($credentials)->id;
             }
         ),
 
