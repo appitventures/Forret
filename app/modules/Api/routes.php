@@ -1,19 +1,25 @@
 <?php
 
 /*
-    Get access token for password grant
- */
-Route::group(['prefix' => 'oauth'], function ()
-{
-    Route::post('token', 'Api\Controllers\OAuthController@access_token');
-});
-
-/*
     Must have an access token to use the API
         Other filters have been made for group checking
  */
 Route::api(['version' => 'v1', 'prefix' => 'api', 'namespace' => 'Api\Controllers', 'protected' => true], function ()
 {
+
+    /* @todo: move out of here */
+    Route::group(['prefix' => 'oauth'], function ()
+    {
+        /* Get access token for password grant */
+        Route::post('token', [
+            'uses' => 'OAuthController@access_token',
+            'protected' => false
+        ]);
+
+        Route::resource('clients', 'OAuthClientController', ['except' => 'edit']);
+
+    });
+
     Route::get('/', 'SessionsController@index');    // api.auth
     Route::post('login', 'SessionsController@store');
     Route::get('logout', 'SessionsController@destroy');
@@ -56,13 +62,4 @@ Route::api(['version' => 'v1', 'prefix' => 'api', 'namespace' => 'Api\Controller
             'uses' => 'AuthController@getLogout'
         ]);
     });
-
-    Route::group(['prefix' => 'oauth'], function ()
-    {
-        Route::get('clients', function ()
-        {
-            return \OAuth\Client::all();
-        });
-    });
-
 });

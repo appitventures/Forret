@@ -13,9 +13,14 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin\Controllers'], function
 
         Route::group(['prefix' => 'oauth'], function ()
         {
-            Route::get('clients', function ()
+            Route::group(['prefix' => 'clients'], function ()
             {
-                return Api::get('oauth/clients');
+                Route::get('/', 'OAuthClientController@index');
+                Route::post('/', 'OAuthClientController@store');
+                Route::get('create', 'OAuthClientController@create');
+                Route::post('{id}', 'OAuthClientController@update');
+                Route::get('{id}/edit', 'OAuthClientController@edit');
+                Route::get('{id}/delete', 'OAuthClientController@delete');
             });
         });
     });
@@ -25,6 +30,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin\Controllers'], function
         'as' => 'adminlogin',
         'uses' => 'SessionsController@create'
     ]);
+
     Route::post('login', 'SessionsController@store');
 
     Route::get('logout', 'SessionsController@destroy');
