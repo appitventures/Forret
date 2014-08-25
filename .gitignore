@@ -1,8 +1,9 @@
-/bootstrap/compiled.php
-/vendor
-composer.lock
 .env.*.php
-.env.php
-app/config/development/*
+/app/storage
 .idea
+.env.php
 public/packages
+composer.lock
+/vendor
+/bootstrap/compiled.php
+app/config/development/*

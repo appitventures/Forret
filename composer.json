@@ -16,7 +16,7 @@
         "esensi/model": "0.3.*",
         "cartalyst/sentry": "2.*",
         "codeception/codeception": "2.*",
-        "lucadegasperi/oauth2-server-laravel": "1.0.x"
+        "lucadegasperi/oauth2-server-laravel": "1.*"
     },
     "autoload": {
         "classmap": [

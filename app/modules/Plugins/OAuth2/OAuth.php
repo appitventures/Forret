@@ -77,6 +77,4 @@ class OAuth
             'approve' => $approve
         ];
     }
-
-
 }
