@@ -32,8 +32,10 @@ App::after(function($request, $response)
 | integrates HTTP Basic authentication for quick, simple checking.
 |
 */
-Route::filter('auth', function(){
-    if (!Sentry::check()) return Redirect::route('login');
+Route::filter('auth', function ()
+{
+    if (!Sentry::check())
+        return Redirect::route('login.create');
 });
 
 Route::filter('inGroup', function($route, $request, $value){
@@ -90,9 +92,6 @@ Route::filter('guest', function()
 
 Route::filter('csrf', function()
 {
-    // var_dump($_SESSION);
-    //            var_dump($_POST);
-    //            die();
 
     // TODO: Rewrite this tree of conditionals
     if (Session::token() !== Input::get('_token') || Session::token()===null || Input::get('_token')===null)
