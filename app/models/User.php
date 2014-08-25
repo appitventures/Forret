@@ -4,10 +4,16 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 use Cartalyst\Sentry\Users\Eloquent\User as SentryUserModel;
 
 
-class User extends SentryUserModel implements UserInterface, RemindableInterface{
+class User extends SentryUserModel implements UserInterface, RemindableInterface
+{
     protected $guarded = ['id'];
     protected $table = 'users';
     protected $dates = ['deleted_at'];
+    protected $hidden = [
+        'remember_token', 'password', 'locked',
+        'activation_code', 'persist_code', 'reset_password_code',
+        'activated_at', 'permissions'
+    ];
 
 
     /**
