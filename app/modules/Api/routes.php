@@ -7,19 +7,6 @@
 Route::api(['version' => 'v1', 'prefix' => 'api', 'namespace' => 'Api\Controllers', 'protected' => true], function ()
 {
 
-    /* @todo: move out of here */
-    Route::group(['prefix' => 'oauth'], function ()
-    {
-        /* Get access token for password grant */
-        Route::post('token', [
-            'uses' => 'OAuthController@access_token',
-            'protected' => false
-        ]);
-
-        Route::resource('clients', 'OAuthClientController', ['except' => 'edit']);
-
-    });
-
     Route::get('/', 'SessionsController@index');    // api.auth
     Route::post('login', 'SessionsController@store');
     Route::get('logout', 'SessionsController@destroy');

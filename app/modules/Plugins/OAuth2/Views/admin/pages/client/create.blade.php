@@ -20,7 +20,7 @@
             <div class="box-header">
                 <h3 class="box-title">Create OAuth2 Client</h3>
             </div>
-                @include('Admin::components.forms.oauth.client.create')
+                @include('OAuth2::admin.components.forms.client.create')
             </div>
         </div>
     </div>

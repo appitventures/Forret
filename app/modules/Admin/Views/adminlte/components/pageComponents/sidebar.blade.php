@@ -18,17 +18,7 @@
             <li><a href="/admin/users/search" style="margin-left: 10px;"><i class="fa fa-search"></i> Search Users</a></li>
         </ul>
     </li>
-    <li class="treeview">
-        <a href="#">
-            <i class="fa fa-key"></i>
-            <span>OAuth Clients</span>
-            <i class="fa fa-angle-left pull-right"></i>
-        </a>
-        <ul class="treeview-menu">
-            <li><a href="/admin/oauth/clients" style=""><i class="fa fa-angle-double-right"></i>Manage Clients</a></li>
-            <li><a href="/admin/oauth/clients/create" style=""><i class="fa fa-plus-circle"></i>Create Client</a></li>
-        </ul>
-    </li>
+    {{ $plugins_sidebar or '' }}
     <li class="active">
         <a href="/admin/logout">
             <i class="fa fa-sign-out"></i> <span>Logout</span>
