@@ -11,6 +11,11 @@ class OAuthServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('OAuth', 'Plugins\OAuth2\OAuth');
-    }
 
+        $this->app['view']->addNamespace('OAuth2', __DIR__ .'/Views/');
+
+        require 'filters.php';
+        require 'routes.php';
+        require 'composers.php';
+    }
 }

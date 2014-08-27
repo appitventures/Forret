@@ -129,8 +129,7 @@ return array(
         'Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider',
         'Cartalyst\Sentry\SentryServiceProvider',
         'LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider',
-        'Appit\Providers\BackendServiceProvider'
-
+        'Appit\Providers\ForretServiceProvider',
     ),
 
     /*

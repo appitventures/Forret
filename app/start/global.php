@@ -13,12 +13,6 @@
 */
 
 
-$adminTheme = 'adminlte';
-View::addNamespace('Admin',__DIR__.'/../modules/Admin/Views/'.$adminTheme);
-$frontendTheme = 'default';
-View::addNamespace('Frontend',__DIR__.'/../modules/Frontend/Views/'.$frontendTheme);
-
-
 /*
 |--------------------------------------------------------------------------
 | Register The Laravel Class Loader
@@ -96,24 +90,3 @@ App::down(function()
 | definitions instead of putting them all in the main routes file.
 |
 */
-/*
-require __DIR__.'/../modules/Admin/filters.php';
-require __DIR__.'/../modules/Api/filters.php';
-require __DIR__.'/../modules/Frontend/filters.php';
-*/
-
-/*
-    Changed to start files
-        each modules can decide what it is loading in with its start file
-        usually will just be filters and routes
-        API has transformers
-
-    maybe in the future something like
-    foreach folder in modules
-        require this
-        makes it more dynamic and 'plugin' like
- */
-
-require __DIR__ .'/../modules/Admin/start.php';
-require __DIR__ .'/../modules/Api/start.php';
-require __DIR__ .'/../modules/Frontend/start.php';

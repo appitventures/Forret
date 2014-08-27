@@ -1,6 +1,7 @@
 .env.*.php
 /app/storage
 .idea
+/storage
 .env.php
 public/packages
 composer.lock
