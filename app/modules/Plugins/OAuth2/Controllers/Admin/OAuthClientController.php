@@ -1,5 +1,6 @@
-<?php namespace Admin\Controllers;
+<?php namespace Plugins\OAuth2\Controllers\Admin;
 
+use Admin\Controllers\BaseController;
 use Dingo\Api\Auth\Shield;
 use Dingo\Api\Dispatcher;
 use Dingo\Api\Exception\StoreResourceFailedException;
@@ -25,20 +26,20 @@ class OAuthClientController extends BaseController
     {
         $data['title'] = 'OAuth2 Client Management';
         $data['clients'] = $this->api->get('oauth/clients');
-        return View::make('Admin::pages.oauth.client.index', $data);
+        return View::make('OAuth2::admin.pages.client.index', $data);
     }
 
     public function create()
     {
         $data['title'] = 'New OAuth2 Client';
-        return View::make('Admin::pages.oauth.client.create', $data);
+        return View::make('OAuth2::admin.pages.client.create', $data);
     }
 
     public function edit($id)
     {
         $data['title'] = 'Edit OAuth2 Client';
         $data['client'] = $this->api->get('oauth/clients/'. $id);
-        return View::make('Admin::pages.oauth.client.edit', $data);
+        return View::make('OAuth2::admin.pages.client.edit', $data);
     }
 
     public function update($id)

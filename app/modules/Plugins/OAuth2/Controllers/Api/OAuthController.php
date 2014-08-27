@@ -1,5 +1,6 @@
-<?php namespace Api\Controllers;
+<?php namespace Plugins\OAuth2\Controllers\Api;
 
+use Api\Controllers\BaseController;
 use AuthorizationServer;
 use Session;
 use Redirect;
