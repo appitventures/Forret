@@ -1,4 +1,4 @@
-<?php namespace OAuth;
+<?php namespace Plugins\OAuth2\Models;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 

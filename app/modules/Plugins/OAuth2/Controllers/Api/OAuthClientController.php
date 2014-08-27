@@ -1,6 +1,7 @@
-<?php namespace Api\Controllers;
+<?php namespace Plugins\OAuth2\Controllers\Api;
 
-use OAuth\Client;
+use Api\Controllers\BaseController;
+use Plugins\OAuth2\Models\Client;
 use Input;
 
 

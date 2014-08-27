@@ -10,19 +10,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin\Controllers'], function
         Route::get('/', 'DashboardController@index');
         Route::get('users/search', 'UsersController@search');
         Route::resource('users', 'UsersController');
-
-        Route::group(['prefix' => 'oauth'], function ()
-        {
-            Route::group(['prefix' => 'clients'], function ()
-            {
-                Route::get('/', 'OAuthClientController@index');
-                Route::post('/', 'OAuthClientController@store');
-                Route::get('create', 'OAuthClientController@create');
-                Route::post('{id}', 'OAuthClientController@update');
-                Route::get('{id}/edit', 'OAuthClientController@edit');
-                Route::get('{id}/delete', 'OAuthClientController@delete');
-            });
-        });
     });
 
 
