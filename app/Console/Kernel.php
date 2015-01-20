@@ -13,6 +13,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         'Forret\Console\Commands\Inspire',
+        'Forret\Console\Commands\MigrateReloadCommand'
     ];
 
     /**
