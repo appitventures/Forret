@@ -1,56 +1,48 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
-    "require": {
-        "laravel/framework": "4.2.*",
-        "way/generators": "2.*",
-        "iron-io/iron_mq": "1.*",
-        "barryvdh/laravel-vendor-cleanup": "1.*",
-        "fzaninotto/faker": "1.*",
-        "barryvdh/laravel-ide-helper": "1.*",
-        "barryvdh/laravel-debugbar": "1.*",
-        "dingo/api": "0.6.*",
-        "bugsnag/bugsnag-laravel": "1.*",
-        "esensi/model": "0.3.*",
-        "cartalyst/sentry": "2.*",
-        "codeception/codeception": "2.*",
-        "lucadegasperi/oauth2-server-laravel": "1.*"
+	"name": "laravel/laravel",
+	"description": "The Laravel Framework.",
+	"keywords": ["framework", "laravel"],
+	"license": "MIT",
+	"require": {
+		"laravel/framework": "~5.0",
+      "barryvdh/laravel-ide-helper": "1.11.*@dev",
+      "barryvdh/laravel-debugbar": "1.8.*@dev",
+      "laracasts/validation": "~1.0",
+      "fzaninotto/faker": "1.*"
     },
-    "autoload": {
-        "classmap": [
-            "app/commands",
-            "app/models",
-            "app/database/migrations",
-            "app/database/seeds"
-        ],
-        "psr-0": {
-            "Appit": "app/",
-            "Api\\": "app/modules/",
-            "Admin\\": "app/modules/",
-            "Frontend\\": "app/modules/",
-            "Plugins\\":"app/modules"
-        }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "php artisan clear-compiled",
-            "php artisan optimize"
-        ],
-        "post-update-cmd": [
-            "php artisan debugbar:publish",
-            "php artisan clear-compiled",
-            "php artisan vendor-cleanup",
-            "php artisan ide-helper:generate",
-            "php artisan optimize"
-        ],
-        "post-create-project-cmd": [
-            "php artisan key:generate"
-        ]
-    },
-    "config": {
-        "preferred-install": "dist"
-    },
-    "minimum-stability": "stable"
+	"require-dev": {
+		"phpunit/phpunit": "~4.0",
+		"phpspec/phpspec": "~2.1"
+	},
+	"autoload": {
+		"classmap": [
+			"database"
+		],
+		"psr-4": {
+			"Forret\\": "app/"
+		}
+	},
+	"autoload-dev": {
+		"classmap": [
+			"tests/TestCase.php"
+		]
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"php artisan clear-compiled",
+			"php artisan optimize"
+		],
+		"post-update-cmd": [
+			"php artisan clear-compiled",
+			"php artisan optimize"
+		],
+		"post-create-project-cmd": [
+			"php -r \"copy('.env.example', '.env');\"",
+			"php artisan key:generate"
+		]
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "dev"
 }

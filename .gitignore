@@ -1,4 +1,4 @@
 /vendor
 .env
 /_ARCHIVE_TO_DELETE
-/.idea
+.idea
