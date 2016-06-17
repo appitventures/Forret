@@ -1,9 +1,0 @@
-class_name: ApiGuyTester
-modules:
-    enabled: [PhpBrowser, REST, ApiGuyHelper, Db]
-    config:
-        PhpBrowser:
-            url: 'http://forret.dev/'
-        REST:
-            url: 'http://forret.dev/api'
-

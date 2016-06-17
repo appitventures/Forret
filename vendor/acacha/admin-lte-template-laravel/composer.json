@@ -1,0 +1,29 @@
+{
+  "name": "acacha/admin-lte-template-laravel",
+  "description": "AdminLTE template applied to Laravel Scaffolding",
+  "license": "MIT",
+  "type": "package",
+  "keywords": ["bootstrap", "theme", "admin", "template", "administrator","admin-lte","adminlte", "laravel"],
+  "authors": [
+    {
+      "name": "Sergi Tur Badenas",
+      "email": "sergiturbadenas@gmail.com",
+      "homepage": "http://acacha.org"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4.0",
+    "illuminate/support": "~5.0",
+    "illuminate/console": "~5.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
+  "autoload": {
+    "psr-4": {"Acacha\\AdminLTETemplateLaravel\\": "src"}
+  },
+  "scripts": {
+    "fix": "php-cs-fixer fix"
+  }
+}
